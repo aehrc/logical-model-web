@@ -1,0 +1,18 @@
+{
+ "name": "HL7AUSparkedLogicalModels",
+ "version" : "0.0.1",  
+ "canonical" : "http://hl7.org.au/ig/lm",
+ "url" : "hhttp://hl7.org.au/ig/lm",
+ "title" : "HL7 AU Sparked Logical Models",
+ "description": "HL7 AU Sparked Logical Models",
+ "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1"
+ },
+ "keywords": [
+   "Logical Model",
+   "Sparked"
+ ],
+ "language": "en",
+ "author": "Brett Esler",
+ "license": "CC0-1.0"
+}
