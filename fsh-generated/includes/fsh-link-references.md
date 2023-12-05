@@ -1,1 +1,0 @@
-[AdverseReactionRisk]: StructureDefinition-AdverseReactionRisk.html
