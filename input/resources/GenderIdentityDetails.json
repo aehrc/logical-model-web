@@ -1,77 +1,82 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "Gender",
-  "meta": {
-      "versionId": "7",
-      "lastUpdated": "2023-12-01T00:42:46.690+00:00",
-      "source": "#NDeU2V8VZIXMbrNA"
-  },
-  "url": "http://hl7.org.au/ig/lm/StructureDefinition/GenderIdentityDetails",
-  "name": "GenderIdentityDetails",
-  "title": "Gender Identity Details",
-  "status": "draft",
-  "description": "Gender identity details",
-  "fhirVersion": "4.0.1",
-  "mapping": [
-      {
-          "identity": "rim",
-          "uri": "http://hl7.org/v3",
-          "name": "RIM Mapping"
-      }
-  ],
-  "kind": "logical",
-  "abstract": false,
-  "type": "http://hl7.org.au/ig/lm/StructureDefinition/GenderIdentityDetails",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
-  "derivation": "specialization",
-  "differential": {
-      "element": [
-          {
-              "id": "GenderIdentityDetails",
-              "path": "GenderIdentityDetails",
-              "short": "Gender",
-              "definition": "Gender identity details",
-              "min": 0,
-              "max": "*"
-          },
-          {
-              "id": "GenderIdentityDetails.GenderIdentity",
-              "path": "GenderIdentityDetails.GenderIdentity",
-              "short": "Gender Identity",
-              "definition": "Gender identity",
-              "min": 0,
-              "max": "1",
-              "type": [
-                  {
-                      "code": "CodeableConcept"
-                  }
-              ]
-          },
-          {
-              "id": "GenderIdentityDetails.SexAssignedAtBirth",
-              "path": "GenderIdentityDetails.SexAssignedAtBirth",
-              "short": "Sex Assigned At Birth",
-              "min": 0,
-              "max": "1",
-              "type": [
-                  {
-                      "code": "CodeableConcept"
-                  }
-              ]
-          },
-          {
-              "id": "GenderIdentityDetails.Pronouns",
-              "path": "GenderIdentityDetails.Pronouns",
-              "short": "Pronouns",
-              "definition": "Pronouns",
-              "min": 0,
-              "max": "1",
-              "type": [
-                  {
-                      "code": "string"
-                  }
-              ]
-          }
-      ]
-  }
+    "resourceType": "StructureDefinition",
+    "id": "SexAndGender",
+    "meta": {
+        "versionId": "2",
+        "lastUpdated": "2023-12-05T05:08:49.994+00:00",
+        "source": "#rbzDRI6cLuahIz3E"
+    },
+    "url": "http://hl7.org.au/ig/lm/StructureDefinition/GenderIdentityDetails",
+    "name": "GenderIdentityDetails",
+    "title": "Gender Identity Details",
+    "status": "draft",
+    "description": "Gender identity details",
+    "fhirVersion": "4.0.1",
+    "mapping": [
+        {
+            "identity": "rim",
+            "uri": "http://hl7.org/v3",
+            "name": "RIM Mapping"
+        }
+    ],
+    "kind": "logical",
+    "abstract": false,
+    "type": "http://hl7.org.au/ig/lm/StructureDefinition/GenderIdentityDetails",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+    "derivation": "specialization",
+    "differential": {
+        "element": [
+            {
+                "id": "GenderIdentityDetails",
+                "path": "GenderIdentityDetails",
+                "short": "Sex And Gender",
+                "definition": "Gender identity details",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "BackboneElement"
+                    }
+                ]
+            },
+            {
+                "id": "GenderIdentityDetails.GenderIdentity",
+                "path": "GenderIdentityDetails.SexAndGenderIdentity",
+                "short": "Gender Identity",
+                "definition": "Gender identity",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ]
+            },
+            {
+                "id": "GenderIdentityDetails.SexAssignedAtBirth",
+                "path": "GenderIdentityDetails.SexAssignedAtBirth",
+                "short": "Sex Assigned At Birth",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ]
+            },
+            {
+                "id": "GenderIdentityDetails.Pronouns",
+                "path": "GenderIdentityDetails.Pronouns",
+                "short": "Pronouns",
+                "definition": "Pronouns",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            }
+        ]
+    }
 }

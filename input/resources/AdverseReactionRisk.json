@@ -2,13 +2,13 @@
 	"resourceType": "StructureDefinition",
 	"id": "AdverseReactionRisk",
 	"meta": {
-		"versionId": "13",
-		"lastUpdated": "2023-11-30T12:40:12.036+00:00",
-		"source": "#vxOyvUbvJJ9IZy1d"
+			"versionId": "22",
+			"lastUpdated": "2023-12-05T06:22:37.258+00:00",
+			"source": "#q6c7fmQJ225DVu9J"
 	},
 	"text": {
-		"status": "extensions",
-		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+			"status": "extensions",
+			"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
 	},
 	"url": "http://hl7.org.au/ig/lm/StructureDefinition/AdverseReactionRisk",
 	"version": "0.0.1",
@@ -16,46 +16,46 @@
 	"title": "Adverse Reaction Risk",
 	"status": "draft",
 	"date": "2023-09-11T00:54:09+10:00",
-	"publisher": "HL7 AU",
+	"publisher": "HL7 AIU",
 	"contact": [
-		{
-			"name": "HL7 AU",
-			"telecom": [
-				{
-					"system": "url",
-					"value": "http://hl7.org.au/"
-				}
-			]
-		},
-		{
-			"name": "AU logical models",
-			"telecom": [
-				{
-					"system": "url",
-					"value": "http://hl7.org.au/"
-				}
-			]
-		}
+			{
+					"name": "HL7 AIU",
+					"telecom": [
+							{
+									"system": "url",
+									"value": "http://hl7.org.au/"
+							}
+					]
+			},
+			{
+					"name": "AU logical models",
+					"telecom": [
+							{
+									"system": "url",
+									"value": "http://hl7.org.au/"
+							}
+					]
+			}
 	],
 	"description": "Risk of harmful or undesirable physiological response which is unique to the individual and associated with exposure to a known substance.",
 	"jurisdiction": [
-		{
-			"coding": [
-				{
-					"system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
-					"code": "036",
-					"display": "Australia (AUS)"
-				}
-			]
-		}
+			{
+					"coding": [
+							{
+									"system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+									"code": "036",
+									"display": "Australia"
+							}
+					]
+			}
 	],
 	"fhirVersion": "4.0.1",
 	"mapping": [
-		{
-			"identity": "rim",
-			"uri": "http://hl7.org/v3",
-			"name": "RIM Mapping"
-		}
+			{
+					"identity": "rim",
+					"uri": "http://hl7.org/v3",
+					"name": "RIM Mapping"
+			}
 	],
 	"kind": "logical",
 	"abstract": false,
@@ -63,54 +63,59 @@
 	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
 	"derivation": "specialization",
 	"differential": {
-		"element": [
-			{
-				"id": "AdverseReactionRisk",
-				"path": "AdverseReactionRisk",
-				"short": "Adverse Reaction Risk",
-				"definition": "Risk of harmful or undesirable physiological response which is unique to the individual and associated with exposure to a known substance.",
-				"min": 0,
-				"max": "*"
-			},
-			{
-				"id": "AdverseReactionRisk.Substance",
-				"path": "AdverseReactionRisk.SubstanceName",
-				"short": "Substance Name",
-				"definition": "Identification of a substance, or substance class, which is considered to put the individual at risk of an adverse reaction event. Both an individual substance and a substance class are valid entries in Substance. A substance may be a compound of simpler substances, for example a medicinal product.",
-				"min": 1,
-				"max": "1",
-				"type": [
+			"element": [
 					{
-						"code": "CodeableConcept"
-					}
-				]
-			},
-			{
-				"id": "AdverseReactionRisk.Manifestation",
-				"path": "AdverseReactionRisk.Manifestation",
-				"short": "Manifestation",
-				"definition": "Clinical symptom and/or sign that were observed or associated with the adverse reaction.",
-				"min": 0,
-				"max": "*",
-				"type": [
+							"id": "AdverseReactionRisk",
+							"path": "AdverseReactionRisk",
+							"short": "Adverse Reaction Risk",
+							"definition": "Risk of harmful or undesirable physiological response which is unique to the individual and associated with exposure to a known substance.\n\nIncludes, but not limited to, allergy and intolerance​\n\nScope:​\n- Medication​\n- Food​\n- Environmental, including latex and bites/stings",
+							"min": 0,
+							"max": "*",
+							"type": [
+									{
+											"code": "BackboneElement"
+									}
+							]
+					},
 					{
-						"code": "CodeableConcept"
-					}
-				]
-			},
-			{
-				"id": "AdverseReactionRisk.Comment",
-				"path": "AdverseReactionRisk.Comment",
-				"short": "Comment",
-				"definition": "Additional narrative about the adverse reaction risk not captured in other fields.",
-				"min": 0,
-				"max": "1",
-				"type": [
+							"id": "AdverseReactionRisk.Substance",
+							"path": "AdverseReactionRisk.SubstanceName",
+							"short": "Substance Name",
+							"definition": "Identification of a substance, or substance class, which is considered to put the individual at risk of an adverse reaction event. Both an individual substance and a substance class are valid entries in Substance. A substance may be a compound of simpler substances, for example a medicinal product.",
+							"min": 1,
+							"max": "1",
+							"type": [
+									{
+											"code": "CodeableConcept"
+									}
+							]
+					},
 					{
-						"code": "string"
+							"id": "AdverseReactionRisk.Manifestation",
+							"path": "AdverseReactionRisk.Manifestation",
+							"short": "Manifestation",
+							"definition": "Clinical symptom and/or sign that were observed or associated with the adverse reaction.",
+							"min": 0,
+							"max": "*",
+							"type": [
+									{
+											"code": "CodeableConcept"
+									}
+							]
+					},
+					{
+							"id": "AdverseReactionRisk.Comment",
+							"path": "AdverseReactionRisk.Comment",
+							"short": "Comment",
+							"definition": "Additional narrative about the adverse reaction risk not captured in other fields.",
+							"min": 0,
+							"max": "1",
+							"type": [
+									{
+											"code": "string"
+									}
+							]
 					}
-				]
-			}
-		]
+			]
 	}
 }

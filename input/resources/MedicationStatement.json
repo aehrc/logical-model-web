@@ -1,0 +1,216 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "MedicationStatement",
+    "meta": {
+        "versionId": "14",
+        "lastUpdated": "2023-12-05T05:50:29.801+00:00",
+        "source": "#WFHjEuVqNjcvXHnH"
+    },
+    "url": "http://hl7.org.au/ig/lm/StructureDefinition/MedicationStatement",
+    "name": "MedicationStatement",
+    "title": "MedicationStatement",
+    "status": "draft",
+    "description": "MedicationStatement",
+    "fhirVersion": "4.0.1",
+    "mapping": [
+        {
+            "identity": "rim",
+            "uri": "http://hl7.org/v3",
+            "name": "RIM Mapping"
+        }
+    ],
+    "kind": "logical",
+    "abstract": false,
+    "type": "http://hl7.org.au/ig/lm/StructureDefinition/MedicationStatement",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+    "derivation": "specialization",
+    "differential": {
+        "element": [
+            {
+                "id": "MedicationStatement",
+                "path": "MedicationStatement",
+                "short": "Medication Statement",
+                "definition": "Details about a medicine, nutritional product or other therapeutic item that is currently being taken or used by the individual, including items that are prescribed or obtained over the counter.",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "BackboneElement"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.MedicineName",
+                "path": "MedicationStatement.MedicineName",
+                "short": "Medicine Name",
+                "definition": "Medicine name",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.Strength",
+                "path": "MedicationStatement.MedicineStrength",
+                "short": "Medicine Strength",
+                "definition": "Strength",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Quantity"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.MedicineForm",
+                "path": "MedicationStatement.MedicineForm",
+                "short": "Medicine Form",
+                "definition": "Medicine form",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.RouteOfAdministration",
+                "path": "MedicationStatement.RouteOfAdministration",
+                "short": "Route Of Administration",
+                "definition": "Route of administration",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.Frequency",
+                "path": "MedicationStatement.Frequency",
+                "short": "Frequency",
+                "definition": "Frequency",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.Duration",
+                "path": "MedicationStatement.Duration",
+                "short": "Duration",
+                "definition": "Duration",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Period"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.PatientInstructions",
+                "path": "MedicationStatement.PatientInstructions",
+                "short": "Patient Instructions",
+                "definition": "Patient instructions",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.ClinicalIndication",
+                "path": "MedicationStatement.ClinicalIndication",
+                "short": "Clinical Indication",
+                "definition": "Clinical indication",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.Comment",
+                "path": "MedicationStatement.Comment",
+                "short": "Comment",
+                "definition": "Comment",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.Status",
+                "path": "MedicationStatement.Status",
+                "short": "Status",
+                "definition": "Status",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.Date",
+                "path": "MedicationStatement.Date",
+                "short": "Date",
+                "definition": "date?",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "dateTime"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.StartDate",
+                "path": "MedicationStatement.StartDate",
+                "short": "Start Date",
+                "definition": "Start date",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "dateTime"
+                    }
+                ]
+            },
+            {
+                "id": "Medications.LongTermIndicator",
+                "path": "MedicationStatement.LongTermIndicator",
+                "short": "Long Term Indicator",
+                "definition": "Long term indicator",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "boolean"
+                    }
+                ]
+            },
+            {
+                "path": "MedicationStatement.MedicineStrength.code"
+            }
+        ]
+    }
+}

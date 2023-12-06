@@ -2,9 +2,9 @@
     "resourceType": "StructureDefinition",
     "id": "ProcedureCompleted",
     "meta": {
-        "versionId": "2",
-        "lastUpdated": "2023-11-30T13:15:44.558+00:00",
-        "source": "#DFsHKi0fzEV8rLUY"
+        "versionId": "14",
+        "lastUpdated": "2023-12-05T05:49:19.489+00:00",
+        "source": "#NOLjPa0XDdkJOf24"
     },
     "name": "ProcedureCompleted",
     "kind": "logical",
@@ -16,13 +16,18 @@
             {
                 "path": "ProcedureCompleted",
                 "short": "Procedure Completed",
-                "definition": "TODO: description",
+                "definition": "Details about a single clinical procedure carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes.​",
                 "min": 0,
-                "max": "*"
+                "max": "*",
+                "type": [
+                    {
+                        "code": "BackboneElement"
+                    }
+                ]
             },
             {
-                "path": "ProcedureCompleted.ProcedureCompletedName",
-                "short": "Procedure Name",
+                "path": "ProcedureCompleted.BodySiteandLaterality",
+                "short": "Body Site and Laterality",
                 "definition": "TODO: description",
                 "min": 0,
                 "max": "*",
@@ -30,29 +35,11 @@
                     {
                         "code": "CodeableConcept"
                     }
-                ],
-                "binding": {
-                    "strength": "required"
-                }
+                ]
             },
             {
-                "path": "ProcedureCompleted.BodySite",
+                "path": "ProcedureCompleted.BodySiteandLaterality",
                 "short": "Body Site",
-                "definition": "TODO: description",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "binding": {
-                    "strength": "required"
-                }
-            },
-            {
-                "path": "ProcedureCompleted.Laterality",
-                "short": "Laterality",
                 "definition": "TODO: description",
                 "min": 0,
                 "max": "*",
