@@ -1,0 +1,105 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "ProcedureCompleted",
+    "meta": {
+        "versionId": "2",
+        "lastUpdated": "2023-11-30T13:15:44.558+00:00",
+        "source": "#DFsHKi0fzEV8rLUY"
+    },
+    "kind": "logical",
+    "differential": {
+        "element": [
+            {
+                "path": "ProcedureCompleted",
+                "short": "Procedure Completed",
+                "definition": "TODO: description",
+                "min": 0,
+                "max": "*"
+            },
+            {
+                "path": "ProcedureCompleted.ProcedureCompletedName",
+                "short": "Procedure Name",
+                "definition": "TODO: description",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "strength": "required"
+                }
+            },
+            {
+                "path": "ProcedureCompleted.BodySite",
+                "short": "Body Site",
+                "definition": "TODO: description",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "strength": "required"
+                }
+            },
+            {
+                "path": "ProcedureCompleted.Laterality",
+                "short": "Laterality",
+                "definition": "TODO: description",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "strength": "required"
+                }
+            },
+            {
+                "path": "ProcedureCompleted.DatePerformed",
+                "short": "Date Performed",
+                "definition": "TODO: description",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "date"
+                    }
+                ]
+            },
+            {
+                "path": "ProcedureCompleted.Comment",
+                "short": "Comment",
+                "definition": "TODO: description",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            },
+            {
+                "path": "ProcedureCompleted.ClinicalIndication",
+                "short": "Clinical Indication",
+                "definition": "TODO: description",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "strength": "required"
+                }
+            }
+        ]
+    }
+}

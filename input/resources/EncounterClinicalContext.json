@@ -1,0 +1,48 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "EncounterClinicalContext",
+    "meta": {
+        "versionId": "3",
+        "lastUpdated": "2023-11-30T08:39:45.877+00:00",
+        "source": "#ykMk1mTLjGl5Wm0X"
+    },
+    "kind": "logical",
+    "differential": {
+        "element": [
+            {
+                "path": "EncounterClinicalContext",
+                "short": "Encounter Clinical Context",
+                "definition": "TODO: description",
+                "min": 0,
+                "max": "*"
+            },
+            {
+                "path": "EncounterClinicalContext.ReasonForEncounter",
+                "short": "Reason For Encounter",
+                "definition": "TODO: description",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "binding": {
+                    "strength": "required"
+                }
+            },
+            {
+                "path": "EncounterClinicalContext.TypeOfEncounter",
+                "short": "Type Of Encounter",
+                "definition": "TODO: description",
+                "min": 0,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ]
+            }
+        ]
+    }
+}

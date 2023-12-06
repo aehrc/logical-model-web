@@ -1,0 +1,72 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VaccinationAdministered",
+  "meta": {
+      "versionId": "4",
+      "lastUpdated": "2023-11-30T13:15:32.527+00:00",
+      "source": "#MXY5cSI4CDDceZAD"
+  },
+  "kind": "logical",
+  "differential": {
+      "element": [
+          {
+              "path": "VaccinationAdministered",
+              "short": "Vaccination Administered",
+              "definition": "TODO: description",
+              "min": 0,
+              "max": "*"
+          },
+          {
+              "path": "VaccinationAdministered.VaccinationName",
+              "short": "Vaccination Name",
+              "definition": "TODO: description",
+              "min": 0,
+              "max": "*",
+              "type": [
+                  {
+                      "code": "CodeableConcept"
+                  }
+              ],
+              "binding": {
+                  "strength": "required"
+              }
+          },
+          {
+              "path": "VaccinationAdministered.SequenceNumber",
+              "short": "Sequence Number",
+              "definition": "TODO: description",
+              "min": 0,
+              "max": "*",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "VaccinationAdministered.DateofAdministration",
+              "short": "Date of Administration",
+              "definition": "TODO: description",
+              "min": 0,
+              "max": "*",
+              "type": [
+                  {
+                      "code": "date"
+                  }
+              ]
+          },
+          {
+              "path": "VaccinationAdministered.Comment",
+              "short": "Comment",
+              "definition": "TODO: description",
+              "min": 0,
+              "max": "*",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          }
+      ]
+  }
+}

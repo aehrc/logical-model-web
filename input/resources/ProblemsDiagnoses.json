@@ -1,0 +1,104 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ProblemOrDiagnosis",
+  "meta": {
+      "versionId": "4",
+      "lastUpdated": "2023-12-04T12:25:33.354+00:00",
+      "source": "#i2XxN7kb9nvLG8K1"
+  },
+  "url": "http://hl7.org.au/ig/lm/StructureDefinition/ProblemsDiagnoses",
+  "name": "ProblemsDiagnoses",
+  "title": "Problems diagnoses",
+  "status": "draft",
+  "description": "Problems diagnoses",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+      {
+          "identity": "rim",
+          "uri": "http://hl7.org/v3",
+          "name": "RIM Mapping"
+      }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "http://hl7.org.au/ig/lm/StructureDefinition/ProblemsDiagnoses",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+      "element": [
+          {
+              "id": "ProblemsDiagnoses",
+              "path": "ProblemOrDiagnosis",
+              "short": "Problem Or Diagnosis",
+              "definition": "Problems Diagnoses",
+              "min": 0,
+              "max": "*"
+          },
+          {
+              "id": "ProblemsDiagnoses.ProblemOrDiagnosisName",
+              "path": "ProblemOrDiagnosis.ProblemOrDiagnosisName",
+              "short": "Problem Or Diagnosis Name",
+              "definition": "Problem Or Diagnosis Name",
+              "min": 1,
+              "max": "1",
+              "type": [
+                  {
+                      "code": "CodeableConcept"
+                  }
+              ]
+          },
+          {
+              "id": "ProblemsDiagnoses.BodySite",
+              "path": "ProblemOrDiagnosis.BodySite",
+              "short": "Body Site",
+              "definition": "Body Site",
+              "min": 0,
+              "max": "1",
+              "type": [
+                  {
+                      "code": "CodeableConcept"
+                  }
+              ]
+          },
+          {
+              "id": "ProblemsDiagnoses.Laterality",
+              "path": "ProblemOrDiagnosis.Laterality",
+              "short": "Laterality",
+              "definition": "Laterality",
+              "min": 0,
+              "max": "1",
+              "type": [
+                  {
+                      "code": "CodeableConcept"
+                  }
+              ]
+          },
+          {
+              "id": "ProblemsDiagnoses.Status",
+              "path": "ProblemOrDiagnosis.Status",
+              "short": "Status",
+              "definition": "Status",
+              "min": 0,
+              "max": "1",
+              "type": [
+                  {
+                      "code": "CodeableConcept"
+                  }
+              ]
+          },
+          {
+              "id": "ProblemsDiagnoses.Comment",
+              "path": "ProblemOrDiagnosis.Comment",
+              "short": "Comment",
+              "definition": "Comment",
+              "min": 0,
+              "max": "1",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          }
+      ]
+  }
+}

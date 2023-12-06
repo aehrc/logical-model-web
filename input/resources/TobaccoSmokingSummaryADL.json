@@ -1,0 +1,392 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "TobaccoSmokingSummaryADL",
+  "meta": {
+      "versionId": "6",
+      "lastUpdated": "2023-11-30T09:38:01.401+00:00",
+      "source": "#6tkSJYCvfsiLIylz"
+  },
+  "url": "http://hl7.org.au/ig/lm/StructureDefinition/TobaccoSmokingSummary",
+  "version": "0.0.1",
+  "name": "TobaccoSmokingSummaryADL",
+  "title": "Tobacco Smoking Summary",
+  "status": "draft",
+  "date": "2023-09-11T00:54:09+10:00",
+  "publisher": "CDG",
+  "description": "Tobacco Smoking Summary",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "type": "http://hl7.org.au/ig/lm/StructureDefinition/TobaccoSmokingSummary",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+      "element": [
+          {
+              "path": "TobaccoSmokingSummaryADL",
+              "short": "TobaccoSmokingSummaryADL",
+              "min": 0,
+              "max": "*"
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.QuitDateDefinition",
+              "short": "QuitDateDefinition",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.QuitAttemptDefinition",
+              "short": "QuitAttemptDefinition",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.CurrentSmokerDefinition",
+              "short": "CurrentSmokerDefinition",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.FormerSmokerDefinition",
+              "short": "FormerSmokerDefinition",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.NeverSmokedDefinition",
+              "short": "NeverSmokedDefinition",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PackDefinition",
+              "short": "PackDefinition",
+              "type": [
+                  {
+                      "code": "integer"
+                  },
+                  {
+                      "code": "Quantity"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PackDefinition",
+              "short": "PackDefinition",
+              "type": [
+                  {
+                      "code": "integer"
+                  },
+                  {
+                      "code": "Quantity"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.LastUpdated",
+              "short": "LastUpdated",
+              "type": [
+                  {
+                      "code": "dateTime"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.OverallStatus",
+              "short": "OverallStatus",
+              "type": [
+                  {
+                      "code": "CodeableConcept"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.OverallDescription",
+              "short": "OverallDescription",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.RegularSmokingCommenced",
+              "short": "RegularSmokingCommenced",
+              "type": [
+                  {
+                      "code": "date"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.DailySmokingCommenced",
+              "short": "DailySmokingCommenced",
+              "type": [
+                  {
+                      "code": "date"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType",
+              "short": "PerType",
+              "type": [
+                  {
+                      "code": "BackboneElement"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.OverallDetails",
+              "short": "OverallDetails",
+              "type": [
+                  {
+                      "code": "BackboneElement"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.OverallQuitDate",
+              "short": "OverallQuitDate",
+              "type": [
+                  {
+                      "code": "date"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.OverallYearsOfSmoking",
+              "short": "OverallYearsOfSmoking",
+              "type": [
+                  {
+                      "code": "Quantity"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.SmokingIndex",
+              "short": "SmokingIndex",
+              "type": [
+                  {
+                      "code": "integer"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.OverallPackYears",
+              "short": "OverallPackYears",
+              "type": [
+                  {
+                      "code": "integer"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.OverallComment",
+              "short": "OverallComment",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.Type",
+              "short": "Type",
+              "type": [
+                  {
+                      "code": "CodeableConcept"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.Status",
+              "short": "Status",
+              "type": [
+                  {
+                      "code": "CodeableConcept"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.Description",
+              "short": "Description",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode",
+              "short": "PerEpisode",
+              "type": [
+                  {
+                      "code": "BackboneElement"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.QuitDate",
+              "short": "QuitDate",
+              "type": [
+                  {
+                      "code": "date"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.TypeDetails",
+              "short": "TypeDetails",
+              "type": [
+                  {
+                      "code": "BackboneElement"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PackYears",
+              "short": "PackYears",
+              "type": [
+                  {
+                      "code": "integer"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.Comment",
+              "short": "Comment",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.EpisodeLabel",
+              "short": "EpisodeLabel",
+              "type": [
+                  {
+                      "code": "integer"
+                  },
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.EpisodeLabel",
+              "short": "EpisodeLabel",
+              "type": [
+                  {
+                      "code": "integer"
+                  },
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.EpisodeStartDate",
+              "short": "EpisodeStartDate",
+              "type": [
+                  {
+                      "code": "date"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.EpisodeEndDate",
+              "short": "EpisodeEndDate",
+              "type": [
+                  {
+                      "code": "date"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.Pattern",
+              "short": "Pattern",
+              "type": [
+                  {
+                      "code": "CodeableConcept"
+                  },
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.Pattern",
+              "short": "Pattern",
+              "type": [
+                  {
+                      "code": "CodeableConcept"
+                  },
+                  {
+                      "code": "string"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.TypicalUseUnits",
+              "short": "TypicalUseUnits",
+              "type": [
+                  {
+                      "code": "Quantity"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.TypicalUseMass",
+              "short": "TypicalUseMass",
+              "type": [
+                  {
+                      "code": "Quantity"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.NumberOfQuitAttempts",
+              "short": "NumberOfQuitAttempts",
+              "type": [
+                  {
+                      "code": "integer"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.EpisodeDetails",
+              "short": "EpisodeDetails",
+              "type": [
+                  {
+                      "code": "BackboneElement"
+                  }
+              ]
+          },
+          {
+              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.EpisodeComment",
+              "short": "EpisodeComment",
+              "type": [
+                  {
+                      "code": "string"
+                  }
+              ]
+          }
+      ]
+  }
+}
