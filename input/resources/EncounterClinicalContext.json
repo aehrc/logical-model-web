@@ -6,7 +6,15 @@
         "lastUpdated": "2023-11-30T08:39:45.877+00:00",
         "source": "#ykMk1mTLjGl5Wm0X"
     },
+    "url": "http://hl7.org.au/ig/lm/StructureDefinition/EncounterClinicalContext",
+    "version": "0.0.1",
+    "name": "EncounterClinicalContext",
+    "status": "draft",
     "kind": "logical",
+    "abstract": false, 
+    "type": "http://hl7.org.au/ig/lm/StructureDefinition/EncounterClinicalContext",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+    "derivation": "specialization",  
     "differential": {
         "element": [
             {

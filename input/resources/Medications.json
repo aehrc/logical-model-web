@@ -28,7 +28,7 @@
       "element": [
           {
               "id": "Medications",
-              "path": "MedicationStatement",
+              "path": "Medications",
               "short": "Medication Statement",
               "definition": "Medications details",
               "min": 0,
@@ -36,7 +36,7 @@
           },
           {
               "id": "Medications.MedicineName",
-              "path": "MedicationStatement.MedicineName",
+              "path": "Medications.MedicineName",
               "short": "Medicine Name",
               "definition": "Medicine name",
               "min": 1,
@@ -49,7 +49,7 @@
           },
           {
               "id": "Medications.Strength",
-              "path": "MedicationStatement.Strength",
+              "path": "Medications.Strength",
               "short": "Strength",
               "definition": "Strength",
               "min": 0,
@@ -62,7 +62,7 @@
           },
           {
               "id": "Medications.MedicineForm",
-              "path": "MedicationStatement.<divclass='panelfloat'>1</div>MedicineForm",
+              "path": "Medications.MedicineForm",
               "short": "<div class='panelfloat'>1</div>Medicine Form",
               "definition": "Medicine form",
               "min": 0,
@@ -75,7 +75,7 @@
           },
           {
               "id": "Medications.RouteOfAdministration",
-              "path": "MedicationStatement.RouteOfAdministration",
+              "path": "Medications.RouteOfAdministration",
               "short": "Route Of Administration",
               "definition": "Route of administration",
               "min": 0,
@@ -88,7 +88,7 @@
           },
           {
               "id": "Medications.Frequency",
-              "path": "MedicationStatement.Frequency",
+              "path": "Medications.Frequency",
               "short": "Frequency",
               "definition": "Frequency",
               "min": 0,
@@ -101,7 +101,7 @@
           },
           {
               "id": "Medications.Duration",
-              "path": "MedicationStatement.Duration",
+              "path": "Medications.Duration",
               "short": "Duration",
               "definition": "Duration",
               "min": 0,
@@ -114,7 +114,7 @@
           },
           {
               "id": "Medications.PatientInstructions",
-              "path": "MedicationStatement.PatientInstructions",
+              "path": "Medications.PatientInstructions",
               "short": "Patient Instructions",
               "definition": "Patient instructions",
               "min": 0,
@@ -127,7 +127,7 @@
           },
           {
               "id": "Medications.ClinicalIndication",
-              "path": "MedicationStatement.ClinicalIndication",
+              "path": "Medications.ClinicalIndication",
               "short": "Clinical Indication",
               "definition": "Clinical indication",
               "min": 0,
@@ -140,7 +140,7 @@
           },
           {
               "id": "Medications.Comment",
-              "path": "MedicationStatement.Comment",
+              "path": "Medications.Comment",
               "short": "Comment",
               "definition": "Comment",
               "min": 0,
@@ -153,7 +153,7 @@
           },
           {
               "id": "Medications.Status",
-              "path": "MedicationStatement.Status",
+              "path": "Medications.Status",
               "short": "Status",
               "definition": "Status",
               "min": 1,
@@ -166,7 +166,7 @@
           },
           {
               "id": "Medications.Date",
-              "path": "MedicationStatement.Date",
+              "path": "Medications.Date",
               "short": "Date",
               "definition": "date?",
               "min": 0,
@@ -179,7 +179,7 @@
           },
           {
               "id": "Medications.StartDate",
-              "path": "MedicationStatement.StartDate",
+              "path": "Medications.StartDate",
               "short": "Start Date",
               "definition": "Start date",
               "min": 0,
@@ -192,7 +192,7 @@
           },
           {
               "id": "Medications.LongTermIndicator",
-              "path": "MedicationStatement.LongTermIndicator",
+              "path": "Medications.LongTermIndicator",
               "short": "Long Term Indicator",
               "definition": "Long term indicator",
               "min": 0,

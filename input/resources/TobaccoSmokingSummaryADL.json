@@ -22,13 +22,13 @@
   "differential": {
       "element": [
           {
-              "path": "TobaccoSmokingSummaryADL",
+              "path": "TobaccoSmokingSummary",
               "short": "TobaccoSmokingSummaryADL",
               "min": 0,
               "max": "*"
           },
           {
-              "path": "TobaccoSmokingSummaryADL.QuitDateDefinition",
+              "path": "TobaccoSmokingSummary.QuitDateDefinition",
               "short": "QuitDateDefinition",
               "type": [
                   {
@@ -37,7 +37,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.QuitAttemptDefinition",
+              "path": "TobaccoSmokingSummary.QuitAttemptDefinition",
               "short": "QuitAttemptDefinition",
               "type": [
                   {
@@ -46,7 +46,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.CurrentSmokerDefinition",
+              "path": "TobaccoSmokingSummary.CurrentSmokerDefinition",
               "short": "CurrentSmokerDefinition",
               "type": [
                   {
@@ -55,7 +55,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.FormerSmokerDefinition",
+              "path": "TobaccoSmokingSummary.FormerSmokerDefinition",
               "short": "FormerSmokerDefinition",
               "type": [
                   {
@@ -64,7 +64,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.NeverSmokedDefinition",
+              "path": "TobaccoSmokingSummary.NeverSmokedDefinition",
               "short": "NeverSmokedDefinition",
               "type": [
                   {
@@ -73,7 +73,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PackDefinition",
+              "path": "TobaccoSmokingSummary.PackDefinition",
               "short": "PackDefinition",
               "type": [
                   {
@@ -85,7 +85,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PackDefinition",
+              "path": "TobaccoSmokingSummary.PackDefinition",
               "short": "PackDefinition",
               "type": [
                   {
@@ -97,7 +97,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.LastUpdated",
+              "path": "TobaccoSmokingSummary.LastUpdated",
               "short": "LastUpdated",
               "type": [
                   {
@@ -106,7 +106,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.OverallStatus",
+              "path": "TobaccoSmokingSummary.OverallStatus",
               "short": "OverallStatus",
               "type": [
                   {
@@ -115,7 +115,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.OverallDescription",
+              "path": "TobaccoSmokingSummary.OverallDescription",
               "short": "OverallDescription",
               "type": [
                   {
@@ -124,7 +124,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.RegularSmokingCommenced",
+              "path": "TobaccoSmokingSummary.RegularSmokingCommenced",
               "short": "RegularSmokingCommenced",
               "type": [
                   {
@@ -133,7 +133,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.DailySmokingCommenced",
+              "path": "TobaccoSmokingSummary.DailySmokingCommenced",
               "short": "DailySmokingCommenced",
               "type": [
                   {
@@ -142,7 +142,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType",
+              "path": "TobaccoSmokingSummary.PerType",
               "short": "PerType",
               "type": [
                   {
@@ -151,7 +151,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.OverallDetails",
+              "path": "TobaccoSmokingSummary.OverallDetails",
               "short": "OverallDetails",
               "type": [
                   {
@@ -160,7 +160,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.OverallQuitDate",
+              "path": "TobaccoSmokingSummary.OverallQuitDate",
               "short": "OverallQuitDate",
               "type": [
                   {
@@ -169,7 +169,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.OverallYearsOfSmoking",
+              "path": "TobaccoSmokingSummary.OverallYearsOfSmoking",
               "short": "OverallYearsOfSmoking",
               "type": [
                   {
@@ -178,7 +178,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.SmokingIndex",
+              "path": "TobaccoSmokingSummary.SmokingIndex",
               "short": "SmokingIndex",
               "type": [
                   {
@@ -187,7 +187,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.OverallPackYears",
+              "path": "TobaccoSmokingSummary.OverallPackYears",
               "short": "OverallPackYears",
               "type": [
                   {
@@ -196,7 +196,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.OverallComment",
+              "path": "TobaccoSmokingSummary.OverallComment",
               "short": "OverallComment",
               "type": [
                   {
@@ -205,7 +205,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.Type",
+              "path": "TobaccoSmokingSummary.PerType.Type",
               "short": "Type",
               "type": [
                   {
@@ -214,7 +214,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.Status",
+              "path": "TobaccoSmokingSummary.PerType.Status",
               "short": "Status",
               "type": [
                   {
@@ -223,7 +223,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.Description",
+              "path": "TobaccoSmokingSummary.PerType.Description",
               "short": "Description",
               "type": [
                   {
@@ -232,7 +232,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode",
+              "path": "TobaccoSmokingSummary.PerType.PerEpisode",
               "short": "PerEpisode",
               "type": [
                   {
@@ -241,7 +241,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.QuitDate",
+              "path": "TobaccoSmokingSummary.PerType.QuitDate",
               "short": "QuitDate",
               "type": [
                   {
@@ -250,7 +250,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.TypeDetails",
+              "path": "TobaccoSmokingSummary.PerType.TypeDetails",
               "short": "TypeDetails",
               "type": [
                   {
@@ -259,7 +259,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PackYears",
+              "path": "TobaccoSmokingSummary.PerType.PackYears",
               "short": "PackYears",
               "type": [
                   {
@@ -268,7 +268,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.Comment",
+              "path": "TobaccoSmokingSummary.PerType.Comment",
               "short": "Comment",
               "type": [
                   {
@@ -277,7 +277,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.EpisodeLabel",
+              "path": "TobaccoSmokingSummary.PerType.PerEpisode.EpisodeLabel",
               "short": "EpisodeLabel",
               "type": [
                   {
@@ -289,7 +289,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.EpisodeLabel",
+              "path": "TobaccoSmokingSummary.PerType.PerEpisode.EpisodeLabel",
               "short": "EpisodeLabel",
               "type": [
                   {
@@ -301,7 +301,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.EpisodeStartDate",
+              "path": "TobaccoSmokingSummary.PerType.PerEpisode.EpisodeStartDate",
               "short": "EpisodeStartDate",
               "type": [
                   {
@@ -310,7 +310,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.EpisodeEndDate",
+              "path": "TobaccoSmokingSummary.PerType.PerEpisode.EpisodeEndDate",
               "short": "EpisodeEndDate",
               "type": [
                   {
@@ -319,7 +319,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.Pattern",
+              "path": "TobaccoSmokingSummary.PerType.PerEpisode.Pattern",
               "short": "Pattern",
               "type": [
                   {
@@ -331,7 +331,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.Pattern",
+              "path": "TobaccoSmokingSummary.PerType.PerEpisode.Pattern",
               "short": "Pattern",
               "type": [
                   {
@@ -343,7 +343,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.TypicalUseUnits",
+              "path": "TobaccoSmokingSummary.PerType.PerEpisode.TypicalUseUnits",
               "short": "TypicalUseUnits",
               "type": [
                   {
@@ -352,7 +352,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.TypicalUseMass",
+              "path": "TobaccoSmokingSummary.PerType.PerEpisode.TypicalUseMass",
               "short": "TypicalUseMass",
               "type": [
                   {
@@ -361,7 +361,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.NumberOfQuitAttempts",
+              "path": "TobaccoSmokingSummary.PerType.PerEpisode.NumberOfQuitAttempts",
               "short": "NumberOfQuitAttempts",
               "type": [
                   {
@@ -370,7 +370,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.EpisodeDetails",
+              "path": "TobaccoSmokingSummary.PerType.PerEpisode.EpisodeDetails",
               "short": "EpisodeDetails",
               "type": [
                   {
@@ -379,7 +379,7 @@
               ]
           },
           {
-              "path": "TobaccoSmokingSummaryADL.PerType.PerEpisode.EpisodeComment",
+              "path": "TobaccoSmokingSummary.PerType.PerEpisode.EpisodeComment",
               "short": "EpisodeComment",
               "type": [
                   {
