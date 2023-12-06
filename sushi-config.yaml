@@ -25,7 +25,7 @@ contact:
       - system: url
         value: http://hl7.org.au/
 description: AU logical models
-jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#036 "Australia"
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#036 "Australia (AUS)"
 license: CC0-1.0
 
 fhirVersion: 4.0.1
