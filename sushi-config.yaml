@@ -11,19 +11,19 @@
 # │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: au.csiro.fhir.logical-models
-canonical: https://aehrc.com/fhir/logical-models
+canonical: https://aehrc.csiro.au/fhir/logical-models
 version: 0.0.1
 name: HL7AUSparkedLogicalModels
 title: HL7 AU Sparked Logical Models
 status: draft
 publisher:
   - name: CSIRO
-    url: https://aehrc.com/
+    url: https://aehrc.csiro.au/
 contact:
   - name: AU logical models
     telecom:
       - system: url
-        value: https://aehrc.com/
+        value: https://aehrc.csiro.au/
 description: AU logical models
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#036 "Australia (AUS)"
 license: CC0-1.0
