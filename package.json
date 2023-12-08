@@ -1,8 +1,8 @@
 {
  "name": "SparkedLogicalModels",
  "version" : "0.0.1",  
- "canonical" : "https://aehrc.com/fhir/logical-models",
- "url" : "https://aehrc.com/fhir/logical-models",
+ "canonical" : "https://aehrc.csiro.au/fhir/logical-models",
+ "url" : "https://aehrc.csiro.au/fhir/logical-models",
  "title" : "Sparked Logical Models",
  "description": "Sparked Logical Models",
  "dependencies": {
