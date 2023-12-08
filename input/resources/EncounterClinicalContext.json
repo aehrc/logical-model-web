@@ -1,58 +1,69 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "EncounterClinicalContext",
-    "meta": {
-        "versionId": "7",
-        "lastUpdated": "2023-12-05T05:55:18.912+00:00",
-        "source": "#5t6G7iyZPMzOwQ65"
-    },
-    "url": "http://hl7.org.au/ig/lm/StructureDefinition/EncounterClinicalContext",
-    "version": "0.0.1",
-    "name": "EncounterClinicalContext",
-    "status": "draft",
-    "kind": "logical",
-    "abstract": false, 
-    "type": "http://hl7.org.au/ig/lm/StructureDefinition/EncounterClinicalContext",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
-    "derivation": "specialization",  
-    "differential": {
-        "element": [
-            {
-                "path": "EncounterClinicalContext",
-                "short": "Encounter Clinical Context",
-                "definition": "Encounter record including visit, admission and other contact with patients.",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "BackboneElement"
-                    }
-                ]
-            },
-            {
-                "path": "EncounterClinicalContext.ReasonForEncounter",
-                "short": "Reason For Encounter",
-                "definition": "The reason for initiation of any healthcare encounter or contact by the individual who is the individual.​\n\nProposed value set combines clinical and administrative values ​\n\n‘Presenting complaint’ (or similar) with a value set comprising symptoms and signs, for example ‘shortness of breath’ or ‘vomiting’; and​\n\n‘Reason for attendance (or similar) with a value set comprising terms that reflect administrative, billing or funding reasons, for example ‘pre-employment medical’ or ‘routine immunisation’.",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ]
-            },
-            {
-                "path": "EncounterClinicalContext.TypeOfEncounter",
-                "short": "Type Of Encounter",
-                "definition": "The modality through which the encounter occurred or was conducted",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ]
-            }
-        ]
+  "resourceType": "StructureDefinition",
+  "id": "EncounterClinicalContext",
+  "meta": {
+    "versionId": "3",
+    "lastUpdated": "2023-12-08T14:34:31.933+00:00",
+    "source": "#gF4JdnrNQYLw22TV"
+  },
+  "extension": [
+    {
+      "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
+      "valueReference": {
+        "reference": "Binary/IMG19082"
+      }
     }
+  ],
+  "url": "https://aehrc.csiro.au/fhir/logical-models/EncounterClinicalContext",
+  "name": "EncounterClinicalContext",
+  "title": "Encounter Clinical Context",
+  "status": "draft",
+  "publisher": "CSIRO",
+  "description": "Encounter record including visit, admission and other contact with patients.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://aehrc.csiro.au/fhir/logical-models/EncounterClinicalContext",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "path": "EncounterClinicalContext",
+        "short": "Encounter Clinical Context",
+        "definition": "Encounter record including visit, admission and other contact with patients.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "path": "EncounterClinicalContext.ReasonForEncounter",
+        "short": "Reason For Encounter",
+        "definition": "The reason for initiation of any healthcare encounter or contact by the individual who is the individual.​\n\nProposed value set combines clinical and administrative values ​\n\n‘Presenting complaint’ (or similar) with a value set comprising symptoms and signs, for example ‘shortness of breath’ or ‘vomiting’; and​\n\n‘Reason for attendance (or similar) with a value set comprising terms that reflect administrative, billing or funding reasons, for example ‘pre-employment medical’ or ‘routine immunisation’.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "path": "EncounterClinicalContext.TypeOfEncounter",
+        "short": "Type Of Encounter",
+        "definition": "The modality through which the encounter occurred or was conducted",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }
+    ]
+  }
 }

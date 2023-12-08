@@ -1,81 +1,96 @@
 {
   "resourceType": "StructureDefinition",
   "id": "VaccinationAdministered",
-    "meta": {
-        "versionId": "6",
-        "lastUpdated": "2023-12-05T05:49:54.087+00:00",
-        "source": "#NEWwQJgYx4V0gENc"
-    },
-    "name": "VaccinationAdministered",
-    "kind": "logical",
-    "type": "http://hl7.org.au/ig/lm/StructureDefinition/VaccinationAdministered",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
-    "derivation": "specialization",
-    "differential": {
-        "element": [
-            {
-                "path": "VaccinationAdministered",
-                "short": "Vaccination Administered",
-                "definition": "Details about a single vaccine that has been administered to the individual.",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "BackboneElement"
-                    }
-                ]
-            },
-            {
-                "path": "VaccinationAdministered.VaccinationName",
-                "short": "Vaccination Name",
-                "definition": "TODO: description",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "CodeableConcept"
-                    }
-                ],
-                "binding": {
-                    "strength": "required"
-                }
-            },
-            {
-                "path": "VaccinationAdministered.SequenceNumber",
-                "short": "Sequence Number",
-                "definition": "TODO: description",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "string"
-                    }
-                ]
-            },
-            {
-                "path": "VaccinationAdministered.DateofAdministration",
-                "short": "Date of Administration",
-                "definition": "TODO: description",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "date"
-                    }
-                ]
-            },
-            {
-                "path": "VaccinationAdministered.Comment",
-                "short": "Comment",
-                "definition": "TODO: description",
-                "min": 0,
-                "max": "*",
-                "type": [
-                    {
-                        "code": "string"
-                    }
-                ]
-            }
-        ]
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2023-12-08T14:34:18.576+00:00",
+    "source": "#Z9lvPkIRZOn9r8M1"
+  },
+  "extension": [
+    {
+      "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
+      "valueReference": {
+        "reference": "Binary/IMG19080"
+      }
     }
+  ],
+  "url": "https://aehrc.csiro.au/fhir/logical-models/VaccinationAdministered",
+  "name": "VaccinationAdministered",
+  "title": "Vaccination Administered",
+  "status": "draft",
+  "publisher": "CSIRO",
+  "description": "Details about a single vaccine that has been administered to the individual.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://aehrc.csiro.au/fhir/logical-models/VaccinationAdministered",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "path": "VaccinationAdministered",
+        "short": "Vaccination Administered",
+        "definition": "Details about a single vaccine that has been administered to the individual.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "path": "VaccinationAdministered.VaccinationName",
+        "short": "Vaccination Name",
+        "definition": "TODO: description",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required"
+        }
+      },
+      {
+        "path": "VaccinationAdministered.SequenceNumber",
+        "short": "Sequence Number",
+        "definition": "TODO: description",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "VaccinationAdministered.DateofAdministration",
+        "short": "Date of Administration",
+        "definition": "TODO: description",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "date"
+          }
+        ]
+      },
+      {
+        "path": "VaccinationAdministered.Comment",
+        "short": "Comment",
+        "definition": "TODO: description",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
 }

@@ -1,0 +1,93 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ProblemOrDiagnosis",
+  "extension": [
+    {
+      "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
+      "valueReference": {
+        "reference": "Binary/IMG19077"
+      }
+    }
+  ],
+  "url": "https://aehrc.csiro.au/fhir/logical-models/ProblemOrDiagnosis",
+  "name": "ProblemOrDiagnosis",
+  "title": "Problem Or Diagnosis",
+  "status": "draft",
+  "publisher": "CSIRO",
+  "description": "Details about a single identified health condition, injury, disability or any other issue which impacts on the physical, mental and/or social well-being of an individual.​",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://aehrc.csiro.au/fhir/logical-models/ProblemOrDiagnosis",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "ProblemOrDiagnosis",
+        "path": "ProblemOrDiagnosis",
+        "short": "Problem Or Diagnosis",
+        "definition": "Details about a single identified health condition, injury, disability or any other issue which impacts on the physical, mental and/or social well-being of an individual.​",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "ProblemOrDiagnosis.ProblemOrDiagnosisName",
+        "path": "ProblemOrDiagnosis.ProblemOrDiagnosisName",
+        "short": "Problem Or Diagnosis Name",
+        "definition": "Problem Or Diagnosis Name",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "ProblemOrDiagnosis.BodySite",
+        "path": "ProblemOrDiagnosis.BodySiteandLaterality",
+        "short": "Body Site and Laterality",
+        "definition": "Body Site",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "ProblemOrDiagnosis.Status",
+        "path": "ProblemOrDiagnosis.Status",
+        "short": "Status",
+        "definition": "Status",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "ProblemOrDiagnosis.Comment",
+        "path": "ProblemOrDiagnosis.Comment",
+        "short": "Comment",
+        "definition": "Comment",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

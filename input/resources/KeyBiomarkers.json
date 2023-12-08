@@ -1,0 +1,150 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "KeyBiomarkers",
+  "meta": {
+    "versionId": "3",
+    "lastUpdated": "2023-12-08T14:34:48.369+00:00",
+    "source": "#EtAzzp4VTQpQUItF"
+  },
+  "extension": [
+    {
+      "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
+      "valueReference": {
+        "reference": "Binary/IMG19084"
+      }
+    }
+  ],
+  "url": "https://aehrc.csiro.au/fhir/logical-models/KeyBiomarkers",
+  "name": "KeyBiomarkers",
+  "title": "Key Biomarkers",
+  "status": "draft",
+  "publisher": "CSIRO",
+  "description": "TODO: description",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://aehrc.csiro.au/fhir/logical-models/KeyBiomarkers",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "path": "KeyBiomarkers",
+        "short": "Key Biomarkers",
+        "definition": "TODO: description",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "path": "KeyBiomarkers.HDL",
+        "short": "HDL",
+        "definition": "TODO: description",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "KeyBiomarkers.LDL",
+        "short": "LDL",
+        "definition": "TODO: description",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "KeyBiomarkers.TotalCholesterol",
+        "short": "Total Cholesterol",
+        "definition": "TODO: description",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "KeyBiomarkers.Triglycerides",
+        "short": "Triglycerides",
+        "definition": "TODO: description",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "KeyBiomarkers.HbA1C",
+        "short": "HbA1C",
+        "definition": "TODO: description",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "KeyBiomarkers.eGFR",
+        "short": "eGFR",
+        "definition": "TODO: description",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "KeyBiomarkers.uACR",
+        "short": "uACR",
+        "definition": "TODO: description",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "KeyBiomarkers.TotalCholesterol.code"
+      },
+      {
+        "path": "KeyBiomarkers.LDL.code"
+      },
+      {
+        "path": "KeyBiomarkers.HDL.code"
+      },
+      {
+        "path": "KeyBiomarkers.uACR.code"
+      },
+      {
+        "path": "KeyBiomarkers.eGFR.code"
+      },
+      {
+        "path": "KeyBiomarkers.HbA1C.code"
+      },
+      {
+        "path": "KeyBiomarkers.Triglycerides.code"
+      }
+    ]
+  }
+}

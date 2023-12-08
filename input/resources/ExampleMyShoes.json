@@ -1,0 +1,198 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ExampleMyShoes",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2023-12-08T14:32:47.292+00:00",
+    "source": "#TxQwNFOTmItoIU7m"
+  },
+  "extension": [
+    {
+      "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
+      "valueReference": {
+        "reference": "Binary/IMG19076"
+      }
+    }
+  ],
+  "url": "https://aehrc.csiro.au/fhir/logical-models/ExampleMyShoes",
+  "name": "ExampleMyShoes",
+  "title": "Example My Shoes",
+  "status": "draft",
+  "publisher": "CSIRO",
+  "description": "**My shoe record**\n Covers the core aspects of shoe ownership.\n  - Preferred types\n  - Appropriate sizes\n  - A shoe by shoe record including:\n    - Approval by experts\n\t- Details of sizing\n\t - Brand etc.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://aehrc.csiro.au/fhir/logical-models/ExampleMyShoes",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "path": "ExampleMyShoes",
+        "short": "Example My Shoes",
+        "definition": "**My shoe record**\n Covers the core aspects of shoe ownership.\n  - Preferred types\n  - Appropriate sizes\n  - A shoe by shoe record including:\n    - Approval by experts\n\t- Details of sizing\n\t - Brand etc.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "path": "ExampleMyShoes.RegularShoeSize",
+        "short": "Regular Shoe Size",
+        "definition": "My regular shoe size",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "ExampleMyShoes.FavouredBrand",
+        "short": "Favoured Brand",
+        "definition": "Shoe brand I like",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+	   {
+        "path": "ExampleMyShoes.PerShoe",
+        "short": "Per Shoe",
+        "definition": "Each of my shoes",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "path": "ExampleMyShoes.PerShoe.Colour",
+        "short": "Colour",
+        "definition": "Colour of a shoe",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://test.com/ValueSet/shoecolour"
+        }
+      },
+      {
+        "path": "ExampleMyShoes.PerShoe.Style",
+        "short": "Style",
+        "definition": "**Style of Shoe**\nFor example\n* Sandals /Jandals\n* Sneakers\n* Slip-ons\n* Boat Shoes\n* Stillettos\n* Platforms",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://test.com/ValueSet/shoestyle"
+        }
+      },
+      {
+        "path": "ExampleMyShoes.PerShoe.ShoeFitsWell",
+        "short": "Shoe Fits Well",
+        "definition": "Does it fit?",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "ExampleMyShoes.PerShoe.KylynnApproved",
+        "short": "Kylynn Approved",
+        "definition": "Does Kylynn like them?",
+        "alias": [
+          "Tick of style",
+          "Appropriate for meetings"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      },
+      {
+        "path": "ExampleMyShoes.PerShoe.Brand",
+        "short": "Brand",
+        "definition": "Shoe brand",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "ExampleMyShoes.PerShoe.Size",
+        "short": "Size",
+        "definition": "Specific shoe size",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "ExampleMyShoes.RegularShoeSize.code"
+      },
+      {
+        "path": "ExampleMyShoes.PerShoe.IndividualShoeIdentifier",
+        "short": "Individual Shoe Identifier",
+        "definition": "National Individual Shoe Identifier (ISI)\nThe HI Service can validate an ISI using information:\n- Colour\n- Brand\n- Serial Number\n- Other",
+        "alias": [
+          "ISI"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ]
+      },
+      {
+        "path": "ExampleMyShoes.PerShoe.SerialNumber",
+        "short": "Serial Number",
+        "definition": "Shoe manufacturer's serial number.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "path": "ExampleMyShoes.PerShoe.Size.code"
+      }
+    ]
+  }
+}

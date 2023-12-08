@@ -1,0 +1,84 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "SexAndGender",
+  "meta": {
+    "versionId": "3",
+    "lastUpdated": "2023-12-08T14:34:40.084+00:00",
+    "source": "#V7I66oymjfUgnTnu"
+  },
+  "extension": [
+    {
+      "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
+      "valueReference": {
+        "reference": "Binary/IMG19083"
+      }
+    }
+  ],
+  "url": "https://aehrc.csiro.au/fhir/logical-models/SexAndGender",
+  "name": "SexAndGender",
+  "title": "Sex And Gender",
+  "status": "draft",
+  "publisher": "CSIRO",
+  "description": "Gender identity details",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://aehrc.csiro.au/fhir/logical-models/SexAndGender",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "GenderIdentityDetails",
+        "path": "SexAndGender",
+        "short": "Sex And Gender",
+        "definition": "Gender identity details",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "GenderIdentityDetails.GenderIdentity",
+        "path": "SexAndGender.SexAndGenderIdentity",
+        "short": "Gender Identity",
+        "definition": "Gender identity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "GenderIdentityDetails.SexAssignedAtBirth",
+        "path": "SexAndGender.SexAssignedAtBirth",
+        "short": "Sex Assigned At Birth",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "GenderIdentityDetails.Pronouns",
+        "path": "SexAndGender.Pronouns",
+        "short": "Pronouns",
+        "definition": "Pronouns",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

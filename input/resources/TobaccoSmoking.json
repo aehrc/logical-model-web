@@ -1,0 +1,62 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "TobaccoSmoking",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2023-12-08T14:34:24.669+00:00",
+    "source": "#dQ5fFJ0X7Nb2mMct"
+  },
+  "extension": [
+    {
+      "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
+      "valueReference": {
+        "reference": "Binary/IMG19081"
+      }
+    }
+  ],
+  "url": "https://aehrc.csiro.au/fhir/logical-models/TobaccoSmoking",
+  "name": "TobaccoSmoking",
+  "title": "Tobacco Smoking",
+  "status": "draft",
+  "publisher": "CSIRO",
+  "description": "Details about the tobacco smoking habits of the individual.​\n\nStatement about current smoking habits for all types of tobacco.​\nProposed value set: Never, Current, Former.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://aehrc.csiro.au/fhir/logical-models/TobaccoSmoking",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "id": "TobaccoSmokingSummary",
+        "path": "TobaccoSmoking",
+        "short": "Tobacco Smoking",
+        "definition": "Details about the tobacco smoking habits of the individual.​\n\nStatement about current smoking habits for all types of tobacco.​\nProposed value set: Never, Current, Former.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "TobaccoSmokingSummary.OverallStatus",
+        "path": "TobaccoSmoking.OverallStatus",
+        "short": "Overall Status",
+        "definition": "Statement about current smoking habits for all types of tobacco",
+        "alias": [
+          "Tobacco smoking status"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      }
+    ]
+  }
+}
