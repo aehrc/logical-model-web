@@ -1,7 +1,7 @@
 {
   "package-id" : "au.csiro.fhir.logical-models",
   "version" : "0.1.0",
-  "path" : "https://aehrc.com/fhir/logical-models",
+  "path" : "https://aehrc.csiro.au/fhir/logical-models",
   "status" : "qa-preview",
   "sequence" : "Release 1",
   "first": true,
