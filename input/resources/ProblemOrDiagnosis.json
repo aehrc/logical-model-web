@@ -28,6 +28,10 @@
         "path": "ProblemOrDiagnosis",
         "short": "Problem Or Diagnosis",
         "definition": "Details about a single identified health condition, injury, disability or any other issue which impacts on the physical, mental and/or social well-being of an individual.​",
+        "alias": [
+          "Condition",
+          "History"
+        ],
         "min": 0,
         "max": "*",
         "type": [
@@ -40,7 +44,7 @@
         "id": "ProblemOrDiagnosis.ProblemOrDiagnosisName",
         "path": "ProblemOrDiagnosis.ProblemOrDiagnosisName",
         "short": "Problem Or Diagnosis Name",
-        "definition": "Problem Or Diagnosis Name",
+        "definition": "Identification of the problem or diagnosis, by name.",
         "min": 1,
         "max": "1",
         "type": [
@@ -51,9 +55,21 @@
       },
       {
         "id": "ProblemOrDiagnosis.BodySite",
-        "path": "ProblemOrDiagnosis.BodySiteandLaterality",
-        "short": "Body Site and Laterality",
-        "definition": "Body Site",
+        "path": "ProblemOrDiagnosis.BodySite",
+        "short": "Body Site",
+        "definition": "Anatomical descriptor/concept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "path": "ProblemOrDiagnosis.Laterality",
+        "short": "Laterality",
+        "definition": "The side of the body where the problem or diagnosis is present,",
         "min": 0,
         "max": "1",
         "type": [
@@ -66,7 +82,7 @@
         "id": "ProblemOrDiagnosis.Status",
         "path": "ProblemOrDiagnosis.Status",
         "short": "Status",
-        "definition": "Status",
+        "definition": "A data element that records whether the condition is active or inactive.",
         "min": 0,
         "max": "1",
         "type": [
@@ -79,7 +95,11 @@
         "id": "ProblemOrDiagnosis.Comment",
         "path": "ProblemOrDiagnosis.Comment",
         "short": "Comment",
-        "definition": "Comment",
+        "definition": "Additional narrative about the problem or diagnosis not captured in other fields.",
+        "alias": [
+          "Note",
+          "Further details"
+        ],
         "min": 0,
         "max": "1",
         "type": [

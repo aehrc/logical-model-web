@@ -1,11 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "TobaccoSmoking",
-  "meta": {
-    "versionId": "2",
-    "lastUpdated": "2023-12-08T14:34:24.669+00:00",
-    "source": "#dQ5fFJ0X7Nb2mMct"
-  },
   "extension": [
     {
       "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
@@ -47,7 +42,8 @@
         "short": "Overall Status",
         "definition": "Statement about current smoking habits for all types of tobacco",
         "alias": [
-          "Tobacco smoking status"
+          "Tobacco smoking status",
+          "Smoking status"
         ],
         "min": 0,
         "max": "1",

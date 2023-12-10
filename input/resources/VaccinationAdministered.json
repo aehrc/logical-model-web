@@ -1,11 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "VaccinationAdministered",
-  "meta": {
-    "versionId": "2",
-    "lastUpdated": "2023-12-08T14:34:18.576+00:00",
-    "source": "#Z9lvPkIRZOn9r8M1"
-  },
   "extension": [
     {
       "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
@@ -32,6 +27,9 @@
         "path": "VaccinationAdministered",
         "short": "Vaccination Administered",
         "definition": "Details about a single vaccine that has been administered to the individual.",
+        "alias": [
+          "Immunisation"
+        ],
         "min": 0,
         "max": "*",
         "type": [
@@ -43,24 +41,26 @@
       {
         "path": "VaccinationAdministered.VaccinationName",
         "short": "Vaccination Name",
-        "definition": "TODO: description",
-        "min": 0,
-        "max": "*",
+        "definition": "The name of the vaccine",
+        "min": 1,
+        "max": "1",
         "type": [
           {
             "code": "CodeableConcept"
           }
-        ],
-        "binding": {
-          "strength": "required"
-        }
+        ]
       },
       {
         "path": "VaccinationAdministered.SequenceNumber",
         "short": "Sequence Number",
-        "definition": "TODO: description",
+        "definition": "The sequence of administration, within a series of vaccinations.",
+        "alias": [
+          "Sequence",
+          "Dose number",
+          "Dose"
+        ],
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "string"
@@ -70,9 +70,14 @@
       {
         "path": "VaccinationAdministered.DateofAdministration",
         "short": "Date of Administration",
-        "definition": "TODO: description",
+        "definition": "The date on which the vaccine was administered to the individual.",
+        "alias": [
+          "Date of immunisation",
+          "Performed date",
+          "Date given"
+        ],
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "date"
@@ -82,9 +87,12 @@
       {
         "path": "VaccinationAdministered.Comment",
         "short": "Comment",
-        "definition": "TODO: description",
+        "definition": "Additional narrative about the vaccination item not captured in other fields.",
+        "alias": [
+          "Note"
+        ],
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "string"

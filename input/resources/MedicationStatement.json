@@ -1,11 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "MedicationStatement",
-  "meta": {
-    "versionId": "4",
-    "lastUpdated": "2023-12-08T14:33:49.699+00:00",
-    "source": "#lWBv1fZ3tbnTv9tk"
-  },
   "extension": [
     {
       "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
@@ -33,6 +28,11 @@
         "path": "MedicationStatement",
         "short": "Medication Statement",
         "definition": "Details about a medicine, nutritional product or other therapeutic item that is currently being taken or used by the individual, including items that are prescribed or obtained over the counter.",
+        "alias": [
+          "Medicine",
+          "Medication",
+          "Drug"
+        ],
         "min": 0,
         "max": "*",
         "type": [
@@ -45,7 +45,7 @@
         "id": "Medications.MedicineName",
         "path": "MedicationStatement.MedicineName",
         "short": "Medicine Name",
-        "definition": "Medicine name",
+        "definition": "Name of the medication or therapeutic item.\nThis data field can be used to record tightly bound orders of multiple medications when they are prescribed as a single pack. The extent of coding may vary from the simple name of the medication item through to details about the actual medication pack to be used. It is strongly recommended that the 'Medicine name’ be coded with a terminology capable of triggering decision support, where possible. Free text entry should only be used if there is no appropriate terminology available or for extemporaneous products.",
         "min": 1,
         "max": "1",
         "type": [
@@ -58,7 +58,10 @@
         "id": "Medications.Strength",
         "path": "MedicationStatement.MedicineStrength",
         "short": "Medicine Strength",
-        "definition": "Strength",
+        "definition": "The amount of the active ingredient in the Medicine, expressed as a ratio or concentration",
+        "alias": [
+          "Concentration"
+        ],
         "min": 0,
         "max": "1",
         "type": [
@@ -115,7 +118,7 @@
         "max": "1",
         "type": [
           {
-            "code": "Period"
+            "code": "BackboneElement"
           }
         ]
       },
@@ -123,12 +126,12 @@
         "id": "Medications.PatientInstructions",
         "path": "MedicationStatement.PatientInstructions",
         "short": "Patient Instructions",
-        "definition": "Patient instructions",
+        "definition": "Additional information on how to use or store the ordered item. May be used to communicate complex dose instructions such as a tapering dose over time. For complex dosage regimes such as tapers, select the “Medication to be tapered” value and enter precise details in the Comment data element.",
         "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "string"
+            "code": "CodeableConcept"
           }
         ]
       },
@@ -136,7 +139,11 @@
         "id": "Medications.ClinicalIndication",
         "path": "MedicationStatement.ClinicalIndication",
         "short": "Clinical Indication",
-        "definition": "Clinical indication",
+        "definition": "Clinical reason for use of the medication or therapeutic item. It is not intended to carry an indication for administrative authorisation purposes",
+        "alias": [
+          "Reason for medication",
+          "Reason for prescription"
+        ],
         "min": 0,
         "max": "1",
         "type": [
@@ -175,7 +182,7 @@
         "id": "Medications.Date",
         "path": "MedicationStatement.Date",
         "short": "Date",
-        "definition": "date?",
+        "definition": "The data when the medication was last prescribed. Partial dates are allowed.",
         "min": 0,
         "max": "1",
         "type": [

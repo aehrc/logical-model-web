@@ -1,11 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ProcedureCompleted",
-  "meta": {
-    "versionId": "2",
-    "lastUpdated": "2023-12-08T14:34:12.546+00:00",
-    "source": "#fixhxLpJbeK0WkpF"
-  },
   "extension": [
     {
       "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
@@ -28,10 +23,16 @@
   "derivation": "specialization",
   "differential": {
     "element": [
+	
       {
         "path": "ProcedureCompleted",
         "short": "Procedure Completed",
         "definition": "Details about a single clinical procedure carried out for screening, investigative, diagnostic, curative, therapeutic, evaluative or palliative purposes.​",
+        "alias": [
+          "Operation",
+          "intervention",
+          "treatment"
+        ],
         "min": 0,
         "max": "*",
         "type": [
@@ -40,10 +41,13 @@
           }
         ]
       },
-      {
-        "path": "ProcedureCompleted.BodySiteandLaterality",
-        "short": "Body Site and Laterality",
-        "definition": "TODO: description",
+	    {
+        "path": "ProcedureCompleted.ProcedureName",
+        "short": "Procedure  Name",
+        "definition": "Identification of the clinical procedure, by name.",
+        "alias": [
+          "Operation name"
+        ],
         "min": 0,
         "max": "*",
         "type": [
@@ -53,26 +57,35 @@
         ]
       },
       {
-        "path": "ProcedureCompleted.BodySiteandLaterality",
+        "path": "ProcedureCompleted.BodySite",
         "short": "Body Site",
-        "definition": "TODO: description",
+        "definition": "Anatomical descriptor/concept",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "CodeableConcept"
           }
-        ],
-        "binding": {
-          "strength": "required"
-        }
+        ]
+      },
+      {
+        "path": "ProcedureCompleted.Laterality",
+        "short": "Laterality",
+        "definition": "The side of the body where the procedure was performed.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
       },
       {
         "path": "ProcedureCompleted.DatePerformed",
         "short": "Date Performed",
-        "definition": "TODO: description",
+        "definition": "The data when the procedure was performed. Partial dates are allowed.",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "date"
@@ -82,9 +95,9 @@
       {
         "path": "ProcedureCompleted.Comment",
         "short": "Comment",
-        "definition": "TODO: description",
+        "definition": "Additional narrative about the procedure not captured in other fields.",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "type": [
           {
             "code": "string"
@@ -94,17 +107,14 @@
       {
         "path": "ProcedureCompleted.ClinicalIndication",
         "short": "Clinical Indication",
-        "definition": "TODO: description",
+        "definition": "Clinical reason for the procedure being performed.",
         "min": 0,
         "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
           }
-        ],
-        "binding": {
-          "strength": "required"
-        }
+        ]
       }
     ]
   }

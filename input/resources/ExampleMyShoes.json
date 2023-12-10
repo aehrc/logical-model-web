@@ -1,11 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ExampleMyShoes",
-  "meta": {
-    "versionId": "2",
-    "lastUpdated": "2023-12-08T14:32:47.292+00:00",
-    "source": "#TxQwNFOTmItoIU7m"
-  },
   "extension": [
     {
       "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
@@ -53,18 +48,6 @@
         ]
       },
       {
-        "path": "ExampleMyShoes.FavouredBrand",
-        "short": "Favoured Brand",
-        "definition": "Shoe brand I like",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "string"
-          }
-        ]
-      },
-	   {
         "path": "ExampleMyShoes.PerShoe",
         "short": "Per Shoe",
         "definition": "Each of my shoes",
@@ -73,6 +56,18 @@
         "type": [
           {
             "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "path": "ExampleMyShoes.FavouredBrand",
+        "short": "Favoured Brand",
+        "definition": "Shoe brand I like",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
           }
         ]
       },

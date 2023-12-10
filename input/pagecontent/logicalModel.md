@@ -1,9 +1,6 @@
 
-### Overviews
 
-<!-- table -->
-
-### HL7 FHIR Models
+### Logical Models
 
 The following table summarizes the logical models used by this guide.
 

@@ -28,6 +28,12 @@
         "path": "AdverseReactionRisk",
         "short": "Adverse Reaction Risk",
         "definition": "Risk of harmful or undesirable physiological response which is unique to the individual and associated with exposure to a known substance.\n\nIncludes, but not limited to, allergy and intolerance​\n\nScope:​\n- Medication​\n- Food​\n- Environmental, including latex and bites/stings",
+        "alias": [
+          "Adverse reaction",
+          "allergy",
+          "intolerance",
+          "hypersensitivity"
+        ],
         "min": 0,
         "max": "*",
         "type": [

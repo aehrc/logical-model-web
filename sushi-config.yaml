@@ -13,8 +13,8 @@
 id: au.csiro.fhir.logical-models
 canonical: https://aehrc.csiro.au/fhir/logical-models
 version: 0.0.1
-name: HL7AUSparkedLogicalModels
-title: HL7 AU Sparked Logical Models
+name: SparkedLogicalModels
+title: Sparked Logical Models
 status: draft
 publisher:
   - name: CSIRO
@@ -27,7 +27,6 @@ contact:
 description: AU logical models
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#036 "Australia (AUS)"
 license: CC0-1.0
-
 fhirVersion: 4.0.1
 dependencies:
 parameters:
@@ -42,12 +41,8 @@ FSHOnly: false
 pages:
   index.md:
     title: Home  
-  maturity.md:
-    title: Maturity Model
   logicalModel.md:
     title: Logical Models 
-  profiles.md:
-    title: Profiles
   terminology.md:
     title: Terminology
   downloads.md:
@@ -61,10 +56,7 @@ menu:
   Table of Contents: toc.html
   Specifications:
     Logical models: logicalModel.html
-    Profiles: profiles.html
     Terminology: terminology.html
-    Extensions: extensions.html
-  Maturity Model: maturity.html
   Artifact Index: artifacts.html			
   Support:
     FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html

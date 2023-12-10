@@ -1,11 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "KeyBiomarkers",
-  "meta": {
-    "versionId": "3",
-    "lastUpdated": "2023-12-08T14:34:48.369+00:00",
-    "source": "#EtAzzp4VTQpQUItF"
-  },
   "extension": [
     {
       "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
@@ -19,7 +14,7 @@
   "title": "Key Biomarkers",
   "status": "draft",
   "publisher": "CSIRO",
-  "description": "TODO: description",
+  "description": "Preventative care and disease management key results.",
   "fhirVersion": "4.0.1",
   "kind": "logical",
   "abstract": false,
@@ -31,7 +26,7 @@
       {
         "path": "KeyBiomarkers",
         "short": "Key Biomarkers",
-        "definition": "TODO: description",
+        "definition": "Preventative care and disease management key results.",
         "min": 0,
         "max": "*",
         "type": [
@@ -43,7 +38,7 @@
       {
         "path": "KeyBiomarkers.HDL",
         "short": "HDL",
-        "definition": "TODO: description",
+        "definition": "Lipids HDL",
         "min": 0,
         "max": "*",
         "type": [
@@ -55,7 +50,7 @@
       {
         "path": "KeyBiomarkers.LDL",
         "short": "LDL",
-        "definition": "TODO: description",
+        "definition": "Lipids LDL",
         "min": 0,
         "max": "*",
         "type": [
@@ -67,7 +62,7 @@
       {
         "path": "KeyBiomarkers.TotalCholesterol",
         "short": "Total Cholesterol",
-        "definition": "TODO: description",
+        "definition": "Lipids Total Cholesterol",
         "min": 0,
         "max": "*",
         "type": [
@@ -79,7 +74,7 @@
       {
         "path": "KeyBiomarkers.Triglycerides",
         "short": "Triglycerides",
-        "definition": "TODO: description",
+        "definition": "Lipids Trigycerides",
         "min": 0,
         "max": "*",
         "type": [
@@ -116,6 +111,11 @@
         "path": "KeyBiomarkers.uACR",
         "short": "uACR",
         "definition": "TODO: description",
+        "alias": [
+          "Albumin Creatinine Ratio",
+          "Urine ACR",
+          "Urine Albumin Creatinine Ratio"
+        ],
         "min": 0,
         "max": "*",
         "type": [
@@ -125,25 +125,32 @@
         ]
       },
       {
-        "path": "KeyBiomarkers.TotalCholesterol.code"
+        "path": "KeyBiomarkers.TotalCholesterol.code",
+        "fixedCode": "mmol/L"
       },
       {
-        "path": "KeyBiomarkers.LDL.code"
+        "path": "KeyBiomarkers.LDL.code",
+        "fixedCode": "mmol/L"
       },
       {
-        "path": "KeyBiomarkers.HDL.code"
+        "path": "KeyBiomarkers.HDL.code",
+        "fixedCode": "mmol/L"
       },
       {
-        "path": "KeyBiomarkers.uACR.code"
+        "path": "KeyBiomarkers.uACR.code",
+        "fixedCode": "mg/mmol"
       },
       {
-        "path": "KeyBiomarkers.eGFR.code"
+        "path": "KeyBiomarkers.eGFR.code",
+        "fixedCode": "mL/min/1.73m^2"
       },
       {
-        "path": "KeyBiomarkers.HbA1C.code"
+        "path": "KeyBiomarkers.HbA1C.code",
+        "fixedCode": "mmol/mol"
       },
       {
-        "path": "KeyBiomarkers.Triglycerides.code"
+        "path": "KeyBiomarkers.Triglycerides.code",
+        "fixedCode": "mmol/L"
       }
     ]
   }

@@ -1,11 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "EncounterClinicalContext",
-  "meta": {
-    "versionId": "3",
-    "lastUpdated": "2023-12-08T14:34:31.933+00:00",
-    "source": "#gF4JdnrNQYLw22TV"
-  },
   "extension": [
     {
       "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
