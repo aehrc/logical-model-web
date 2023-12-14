@@ -3,3 +3,4 @@ temp
 output
 /fsh-generated/*
 /template/*
+/.vs/*

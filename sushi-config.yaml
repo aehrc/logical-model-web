@@ -35,9 +35,6 @@ copyrightYear: 2021+
 releaseLabel: CI Build
 # releaseLabel: trial-use
 
-FSHOnly: false
-
-
 pages:
   index.md:
     title: Home  
@@ -50,7 +47,6 @@ pages:
   changes.html:
     title: Change History
 
-			
 menu:
   IG Home: index.html
   Table of Contents: toc.html
