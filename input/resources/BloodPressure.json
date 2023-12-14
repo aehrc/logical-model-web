@@ -50,10 +50,7 @@
           }
         ]
       },
-      {
-        "path": "BloodPressure.SystolicPressure.code",
-        "fixedCode": "mm[Hg]"
-      },
+    
       {
         "path": "BloodPressure.DiastolicPressure",
         "short": "Diastolic Pressure",
@@ -69,10 +66,7 @@
           }
         ]
       },
-      {
-        "path": "BloodPressure.DiastolicPressure.code",
-        "fixedCode": "mm[Hg]"
-      }
+     
     ]
   }
 }
