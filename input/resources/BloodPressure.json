@@ -18,6 +18,8 @@
   "fhirVersion": "4.0.1",
   "kind": "logical",
   "type": "https://aehrc.csiro.au/fhir/logical-models/BloodPressure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
   "differential": {
     "element": [
       {
