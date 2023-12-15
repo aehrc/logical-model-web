@@ -19,9 +19,10 @@ The following table summarizes the logical models used by this guide.
 {% for sd_hash in site.data.structuredefinitions -%}
   {%- assign sd = sd_hash[1] -%}
   {%- if sd.kind  == "logical" -%}
-  <tr><td><a href="{{sd.path}}">{{sd.name}}</a></td></tr>
-  <tr><td>{{sd.description}}</td></tr>
-  {%- endif -%}
+	{% assign imagea = sd.description | split: "<img" %}
+	{% assign imageb = imagea[1] | split: "/>" %}
+  <tr><td><a href="{{sd.path}}">{{sd.name}}</a></td><td><img{{imageb[0]}}/></td></tr>
+	{%- endif -%}
 {%- endfor -%}
 
 </tbody>
