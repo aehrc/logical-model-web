@@ -40,20 +40,14 @@ pages:
     title: Home  
   logicalModel.md:
     title: Logical Models 
-  terminology.md:
-    title: Terminology
   downloads.md:
     title: Useful Downloads
-  changes.html:
-    title: Change History
 
 menu:
   IG Home: index.html
   Table of Contents: toc.html
   Specifications:
     Logical models: logicalModel.html
-    Terminology: terminology.html
-  Artifact Index: artifacts.html			
   Support:
     FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
     Report an issue: new-tab https://aehrc.com/
