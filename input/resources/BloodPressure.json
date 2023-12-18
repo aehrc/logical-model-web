@@ -40,6 +40,7 @@
         "path": "BloodPressure",
         "short": "Blood Pressure",
         "definition": "Measurement of the blood pressure in a single artery as a proxy for systemic arterial pressure.",
+        "comment": "**Purpose**\n\nTo record an observation about the systemic blood pressure at a point in time.\n\n**Supported Models**\n\nBlood pressure, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.3574\n\n**Considerations**\n\n* It is anticipated that this data group may be expanded over time to incorporate additional detail:\n  * about the context of the measurement, such as the location of measurement, level of exertion at the time of measurement and size of the cuff; or\n  * recording of the actual blood pressure measurement in a specified artery; or\n  * mean arterial pressure, which is commonly measured by consumer devices.\n* The measured pressure can be recorded using a device.",
         "alias": [
           "BP"
         ],

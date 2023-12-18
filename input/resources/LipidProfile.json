@@ -37,6 +37,7 @@
         "path": "LipidProfile",
         "short": "Lipid Profile",
         "definition": "Panel of blood tests used to measure blood lipid concentrations.",
+        "comment": "**Purpose**\n\nTo record a group of blood lipid concentrations at a point in time\n\n**Considerations**\n\nIt is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test.",
         "alias": [
           "Lipid Panel"
         ],

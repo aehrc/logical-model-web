@@ -45,6 +45,7 @@
         "path": "ProcedureCompleted",
         "short": "Procedure Completed",
         "definition": "A clinical procedure is an intentional intervention to diagnose, treat or manage a health condition, often involving invasive or potentially harmful techniques requiring skin or mucosal penetration or tissue manipulation.",
+        "comment": "**Purpose**\n\nTo record details about a procedure that has been performed or carried out.\n\n**Misuse**\n\n* Not to be used to record vaccination administration – use the Vaccination administration model for this purpose.\n* Not to be used to record non-invasive procedures that are found in some terminology coding hierarchies, such as counselling, patient transportation, day care services, home modification or exercise.\n\n**Supported Models**\n\nProcedure, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.204\n\nProcedure, HL7 FHIR Resource [Internet]. Health Level Seven International; [accessed 2023 Dec 10]. Available from: https://hl7.org/fhir/R5/procedure.html.\n\n**Example**\n\n* Taking a blood sample or suture removal;\n* Insertion of an intravenous cannula or a urinary catheter;\n* Endoscopy\n* Biopsy;\n* Manual manipulation of a fracture or dislocation\n* External version of a foetus;\n* Surgical operation;\n* Electrical cardioversion",
         "alias": [
           "Operation",
           "intervention",
@@ -72,6 +73,7 @@
         "path": "ProcedureCompleted.ProcedureName",
         "short": "Procedure  Name",
         "definition": "Identification of the clinical procedure, by name.",
+        "comment": "**Considerations**\n\nIt is strongly recommended that ‘Procedure name’ be coded with a terminology capable of triggering decision support, where possible. Free text entry should only be permitted if there is no appropriate terminology available.\n\nThis ADHA value set contains SNOMED CT-AU content from the _Procedure foundation reference set_\n\n**Example**\n\n302399005 | Punch biopsy of skin lesion |\n30549001 | Suture removal |",
         "alias": [
           "Operation name"
         ],
@@ -117,6 +119,7 @@
         "path": "ProcedureCompleted.DatePerformed",
         "short": "Date Performed",
         "definition": "The data when the procedure was performed. Partial dates are allowed.",
+        "comment": "**Considerations**\n\nPartial dates are allowed.",
         "min": 0,
         "max": "1",
         "type": [

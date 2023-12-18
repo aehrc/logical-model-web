@@ -42,6 +42,7 @@
         "path": "ProblemOrDiagnosisSummary",
         "short": "Problem Or Diagnosis Summary",
         "definition": "Details about a single identified health condition, injury, disability or any other issue which impacts on the physical, mental and/or social well-being of an individual.​",
+        "comment": "**Purpose**\n\nTo record summary information about a single identified problem or diagnosis.\n\n**Supported Models**\n\nProblem/Diagnosis, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.169\n\nCondition, HL7 FHIR Resource [Internet]. Health Level Seven International; [accessed 2023 Dec 10]. Available from: https://hl7.org/fhir/R5/condition.html.\n\n**Considerations**\n\n* It is anticipated that this data group will be expanded over time to incorporate additional detail about the problem or diagnosis.\n* Each problem or diagnosis can be included within a curated Problem or Medical History list (or similar)\n* Both problems or diagnoses can be recorded using this same data model without having to distinguish and label them as one or the other. The recording pattern is closely aligned, and what may originally be considered a ‘soft’ problem may evolve towards a formal diagnosis as more clinical evidence is discovered.",
         "alias": [
           "Condition"
         ],

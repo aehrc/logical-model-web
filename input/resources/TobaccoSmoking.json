@@ -42,6 +42,7 @@
         "path": "TobaccoSmoking",
         "short": "Tobacco Smoking",
         "definition": "Summary information about an individual’s pattern of smoking tobacco and tobacco-containing products.",
+        "comment": "**Purpose**\n\nTo record summary information about the tobacco smoking habits of an individual.\n\n**Supported Models**\n\nTobacco smoking summary, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.2466\n\n**Considerations**\n\n* It is anticipated that this data group will be expanded over time to incorporate additional detail about the smoking habits, including the type/form of tobacco, typical use, and episodes of use.\n* Tobacco smoking summary is one component of a larger group of models recording lifestyle risk factors and related behaviour, such as alcohol consumption and other substance use.",
         "alias": [
           "Smoking"
         ],
@@ -68,6 +69,7 @@
         "path": "TobaccoSmoking.OverallStatus",
         "short": "Overall Status",
         "definition": "Statement about current smoking habits for all types of tobacco",
+        "comment": "**Considerations**\n\nThis AEHRC value set provides the three minimal status terms.\n\n**Example**\n\n* Lifetime non-smoker\n* Current smoker\n* Former smoker",
         "alias": [
           "Tobacco smoking status"
         ],

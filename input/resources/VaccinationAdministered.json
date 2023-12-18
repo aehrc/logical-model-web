@@ -41,6 +41,7 @@
         "path": "VaccinationAdministered",
         "short": "Vaccination Administered",
         "definition": "Intentional introduction of a substance into the body to stimulate the body’s immune response against a disease.",
+        "comment": "**Purpose**\n\nTo record details about a vaccine that has been administered.\n\n**Supported Models**\n\nImmunization, HL7 FHIR Resource [Internet]. Health Level Seven International; [accessed 2023 Dec 10]. Available from: https://hl7.org/fhir/R5/procedure.html.\n\nVaccination management, Proposed archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. Available from: https://ckm.openehr.org/ckm/archetypeproposals/1013.38.273\n\n**Considerations**\n\n* It is anticipated that this data group will be expanded over time to incorporate additional detail about the administration.\n* Each vaccination can be included within a curated Vaccination or Immunisation list (or similar).",
         "alias": [
           "Immunisation administered"
         ],
@@ -66,6 +67,7 @@
         "path": "VaccinationAdministered.VaccinationName",
         "short": "Vaccination Name",
         "definition": "The name of the vaccine administered.",
+        "comment": "**Considerations**\n\nIt is strongly recommended that ‘Vaccine name’ be coded with a terminology capable of triggering decision support, where possible. Free text entry should only be permitted if there is no appropriate terminology available.\n\n**Example**\n\n709541000168107 | Fluvax 2015\n38598009 | MMR vaccination",
         "alias": [
           "Immunisation name"
         ],
@@ -87,6 +89,7 @@
         "path": "VaccinationAdministered.SequenceNumber",
         "short": "Sequence Number",
         "definition": "The sequence of the vaccine administration within a series of administrations.",
+        "comment": "**Example**\n\n* First, Second, Third,\n* Booster vaccination\n * Travel vaccination, \n * ‘2,’ or ‘2 of 3’.",
         "alias": [
           "Sequence number",
           "Dose number",
