@@ -1,0 +1,65 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Pulse",
+  "extension": [
+    {
+      "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
+      "valueReference": {
+        "reference": "Binary/IMG23ff0d3d-be4c-4ba5-8b34-4946ce17bcb1"
+      }
+    }
+  ],
+  "url": "https://aehrc.csiro.au/fhir/logical-models/Pulse",
+  "name": "Pulse",
+  "title": "Pulse",
+  "status": "draft",
+  "publisher": "CSIRO",
+  "description": "The Pulse Logical Model Mindmap is shown below.\n\n<div><img src='data:image/png;base64,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'/></div>\n\nThe rate and associated findings related to the palpable beat of blood as it is pumped through a peripheral artery by the heart.\n\n**Purpose**\n\nTo record an observation about a peripheral pulse at a point in time.\n\n**Supported Models**\n\nPulse/Heart beat, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.4295\n\n**Considerations**\n\n* It is anticipated that this data group may be expanded over time to incorporate additional detail:\n\t* about the context of the measurement, such as the location of measurement, characteristics of the pulse and level of exertion at the time of measurement; or \n\t* recording of the pulse findings in one or more specified artery for comparison purposes; or \n\t* interpretation of the pulse findings as a rhythm.\n* The measured rate can be recorded using a device.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "type": "https://aehrc.csiro.au/fhir/logical-models/Pulse",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "extension": [
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-mapping",
+            "valueString": "Pulse/Heart beat, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.4295"
+          },
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
+            "valueString": "To record an observation about a peripheral pulse at a point in time."
+          },
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
+            "valueString": "* It is anticipated that this data group may be expanded over time to incorporate additional detail:\n\t* about the context of the measurement, such as the location of measurement, characteristics of the pulse and level of exertion at the time of measurement; or \n\t* recording of the pulse findings in one or more specified artery for comparison purposes; or \n\t* interpretation of the pulse findings as a rhythm.\n* The measured rate can be recorded using a device."
+          }
+        ],
+        "path": "Pulse",
+        "short": "Pulse",
+        "definition": "The rate and associated findings related to the palpable beat of blood as it is pumped through a peripheral artery by the heart.",
+        "comment": "**Purpose**\n\nTo record an observation about a peripheral pulse at a point in time.\n\n**Supporting Model(s)**\n\nPulse/Heart beat, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.4295\n\n**Considerations**\n\n* It is anticipated that this data group may be expanded over time to incorporate additional detail:\n\t* about the context of the measurement, such as the location of measurement, characteristics of the pulse and level of exertion at the time of measurement; or \n\t* recording of the pulse findings in one or more specified artery for comparison purposes; or \n\t* interpretation of the pulse findings as a rhythm.\n* The measured rate can be recorded using a device.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "path": "Pulse.Rate",
+        "short": "Rate",
+        "definition": "The measured rate of the peripheral pulse.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "Pulse.Rate.code",
+        "fixedCode": "/min"
+      }
+    ]
+  }
+}

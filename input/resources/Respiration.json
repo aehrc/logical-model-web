@@ -1,0 +1,65 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Respiration",
+  "extension": [
+    {
+      "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
+      "valueReference": {
+        "reference": "Binary/IMG467bc511-9bff-45ef-b710-92d83f2230cc"
+      }
+    }
+  ],
+  "url": "https://aehrc.csiro.au/fhir/logical-models/Respiration",
+  "name": "Respiration",
+  "title": "Respiration",
+  "status": "draft",
+  "publisher": "CSIRO",
+  "description": "The Respiration Logical Model Mindmap is shown below.\n\n<div><img src='data:image/png;base64,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'/></div>\n\nThe rate and characteristics of spontaneous breathing by an individual.\n\n**Purpose**\n\nTo record an observation about respiration at a point in time.\n\n**Supported Models**\n\nRespiration, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.4218\n\n**Considerations**\n\nIt is anticipated that this data group may be expanded over time to incorporate additional detail about the context of the measurement, such as the level of exertion at the time of measurement.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "type": "https://aehrc.csiro.au/fhir/logical-models/Respiration",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "extension": [
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
+            "valueString": "To record an observation about respiration at a point in time."
+          },
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
+            "valueString": "It is anticipated that this data group may be expanded over time to incorporate additional detail about the context of the measurement, such as the level of exertion at the time of measurement."
+          },
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-mapping",
+            "valueString": "Respiration, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.4218"
+          }
+        ],
+        "path": "Respiration",
+        "short": "Respiration",
+        "definition": "The rate and characteristics of spontaneous breathing by an individual.",
+        "comment": "**Purpose**\n\nTo record an observation about respiration at a point in time.\n\n**Supporting Model(s)**\n\nRespiration, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.4218\n\n**Considerations**\n\nIt is anticipated that this data group may be expanded over time to incorporate additional detail about the context of the measurement, such as the level of exertion at the time of measurement.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "path": "Respiration.Rate",
+        "short": "Rate",
+        "definition": "The measured frequency of spontaneous breathing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "Respiration.Rate.code",
+        "fixedCode": "/min"
+      }
+    ]
+  }
+}

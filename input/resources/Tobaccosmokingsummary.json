@@ -1,0 +1,920 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Tobaccosmokingsummary",
+  "url": "http://openehr.org/logicalmodel-tobaccosmokingsummary-R4",
+  "version": "0",
+  "name": "Tobaccosmokingsummary",
+  "title": "Tobacco smoking summary",
+  "status": "draft",
+  "date": "2023-12-18",
+  "publisher": "openEHR",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.veratech.es"
+        }
+      ]
+    }
+  ],
+  "description": "Summary or persistent information about the tobacco smoking habits of an individual.",
+  "purpose": "To record summary information about the individual's pattern of smoking of tobacco and tobacco-containing products.",
+  "fhirVersion": "4.0.0",
+  "mapping": [
+    {
+      "identity": "openEHR",
+      "uri": "http://openehr.org",
+      "name": "openEHR Mapping"
+    },
+    {
+      "identity": "openEHR-natural",
+      "uri": "http://openehr.org",
+      "name": "openEHR natural path"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "snapshot": {
+    "element": [
+      {
+        "id": "Tobacco_smoking_summary",
+        "path": "Tobacco_smoking_summary",
+        "short": "Tobacco smoking summary",
+        "definition": "Summary or persistent information about the tobacco smoking habits of an individual.",
+        "base": {
+          "path": "Tobacco_smoking_summary"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree",
+        "path": "Tobacco_smoking_summary.Tree",
+        "short": "Tree",
+        "definition": "@ internal @",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Overall_status",
+        "path": "Tobacco_smoking_summary.Tree.Overall_status",
+        "short": "Overall status",
+        "definition": "Statement about current smoking behaviour for all types of tobacco.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Overall_status",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Overall_description",
+        "path": "Tobacco_smoking_summary.Tree.Overall_description",
+        "short": "Overall description",
+        "definition": "Narrative summary about the individual's overall tobacco smoking pattern and history.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Overall_description",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Regular_smoking_commenced",
+        "path": "Tobacco_smoking_summary.Tree.Regular_smoking_commenced",
+        "short": "Regular smoking commenced",
+        "definition": "The date or partial date when the individual first started frequent or regular, but usually non-daily, smoking of tobacco of any type.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Regular_smoking_commenced",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Daily_smoking_commenced",
+        "path": "Tobacco_smoking_summary.Tree.Daily_smoking_commenced",
+        "short": "Daily smoking commenced",
+        "definition": "The date or partial date when the individual first started daily smoking of tobacco of any type.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Daily_smoking_commenced",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type",
+        "path": "Tobacco_smoking_summary.Tree.Per_type",
+        "short": "Per type",
+        "definition": "Details about smoking activity for a specified type of smoked tobacco.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Type",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Type",
+        "short": "Type",
+        "definition": "The type of tobacco smoked by the individual.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Status",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Status",
+        "short": "Status",
+        "definition": "Statement about current smoking behaviour for the specified type of tobacco.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Status",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Description",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Description",
+        "short": "Description",
+        "definition": "Narrative summary about smoking behaviour for the specified type of tobacco.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Description",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Per_episode",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode",
+        "short": "Per episode",
+        "definition": "Details about a discrete period of smoking activity for the specified type of tobacco.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_label_DV_COUNT",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_label_DV_COUNT",
+        "short": "Episode label",
+        "definition": "Identification of an episode of smoking activity - either as a number in a sequence and/or a named event.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_label_DV_COUNT",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.items_Episode_label_DV_TEXT",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.items_Episode_label_DV_TEXT",
+        "short": "Episode label",
+        "definition": "Identification of an episode of smoking activity - either as a number in a sequence and/or a named event.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.items_Episode_label_DV_TEXT",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_start_date",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_start_date",
+        "short": "Episode start date",
+        "definition": "Date when this episode commenced.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_start_date",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_end_date",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_end_date",
+        "short": "Episode end date",
+        "definition": "Date when this episode ceased.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_end_date",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Pattern_DV_CODED_TEXT",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Pattern_DV_CODED_TEXT",
+        "short": "Pattern",
+        "definition": "The typical pattern of smoking for the specified type of tobacco.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Pattern_DV_CODED_TEXT",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.items_Pattern_DV_TEXT",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.items_Pattern_DV_TEXT",
+        "short": "Pattern",
+        "definition": "The typical pattern of smoking for the specified type of tobacco.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.items_Pattern_DV_TEXT",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Typical_use_(units)",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Typical_use_(units)",
+        "short": "Typical use (units)",
+        "definition": "Estimate of number of units of the specified type of tobacco consumed.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Typical_use_(units)",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Typical_use_(mass)",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Typical_use_(mass)",
+        "short": "Typical use (mass)",
+        "definition": "Estimate of the weight of loose leaf tobacco smoked.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Typical_use_(mass)",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Number_of_quit_attempts",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Number_of_quit_attempts",
+        "short": "Number of quit attempts",
+        "definition": "Total number of times the individual has attempted to stop smoking the specified type of tobacco within this episode.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Number_of_quit_attempts",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_details",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_details",
+        "short": "Episode details",
+        "definition": "Additional structured details about the specified episode of tobacco smoking.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_details",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_comment",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_comment",
+        "short": "Episode comment",
+        "definition": "Additional narrative about tobacco smoking during the specified episode, not captured in other fields.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Per_episode.Episode_comment",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Quit_date",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Quit_date",
+        "short": "Quit date",
+        "definition": "Date when the individual last smoked the specified type of tobacco.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Quit_date",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Type_details",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Type_details",
+        "short": "Type details",
+        "definition": "Additional structured details about the specified type of tobacco smoking.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Type_details",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Pack_years",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Pack_years",
+        "short": "Pack years",
+        "definition": "Estimate of the cumulative amount of tobacco smoked using the specified type of tobacco.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Pack_years",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Per_type.Comment",
+        "path": "Tobacco_smoking_summary.Tree.Per_type.Comment",
+        "short": "Comment",
+        "definition": "Additional narrative about smoking of the specified type of tobacco, not captured in other fields.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Per_type.Comment",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Overall_details",
+        "path": "Tobacco_smoking_summary.Tree.Overall_details",
+        "short": "Overall details",
+        "definition": "Additional structured details about the overall tobacco smoking behaviour.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Overall_details",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Overall_quit_date",
+        "path": "Tobacco_smoking_summary.Tree.Overall_quit_date",
+        "short": "Overall quit date",
+        "definition": "The date when the individual last ceased using tobacco of any type.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Overall_quit_date",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Overall_years_of_smoking",
+        "path": "Tobacco_smoking_summary.Tree.Overall_years_of_smoking",
+        "short": "Overall years of smoking",
+        "definition": "The cumulative number of years that the individual has smoked tobacco.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Overall_years_of_smoking",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Smoking_index",
+        "path": "Tobacco_smoking_summary.Tree.Smoking_index",
+        "short": "Smoking index",
+        "definition": "An indication of the cumulative amount of tobacco smoking exposure.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Smoking_index",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Overall_pack_years",
+        "path": "Tobacco_smoking_summary.Tree.Overall_pack_years",
+        "short": "Overall pack years",
+        "definition": "Estimate of the cumulative amount for all types of tobacco smoked.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Overall_pack_years",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.Tree.Overall_comment",
+        "path": "Tobacco_smoking_summary.Tree.Overall_comment",
+        "short": "Overall comment",
+        "definition": "Additional narrative about all tobacco smoking that has not been captured in other fields.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.Tree.Overall_comment",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.protocol_Tree",
+        "path": "Tobacco_smoking_summary.protocol_Tree",
+        "short": "Tree",
+        "definition": "@ internal @",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.protocol_Tree",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.protocol_Tree.Extension",
+        "path": "Tobacco_smoking_summary.protocol_Tree.Extension",
+        "short": "Extension",
+        "definition": "Additional information required to capture local content or to align with other reference models/formalisms.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Tobacco_smoking_summary.protocol_Tree.Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.protocol_Tree.Quit_date_definition",
+        "path": "Tobacco_smoking_summary.protocol_Tree.Quit_date_definition",
+        "short": "Quit date definition",
+        "definition": "The applied definition for the 'Quit date' data elements used in this archetype.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.protocol_Tree.Quit_date_definition",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.protocol_Tree.Quit_attempt_definition",
+        "path": "Tobacco_smoking_summary.protocol_Tree.Quit_attempt_definition",
+        "short": "Quit attempt definition",
+        "definition": "The applied definition for a Quit attempt used to determine value for the 'Number of quit attempts' data element used in this archetype.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.protocol_Tree.Quit_attempt_definition",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.protocol_Tree.Current_smoker_definition",
+        "path": "Tobacco_smoking_summary.protocol_Tree.Current_smoker_definition",
+        "short": "Current smoker definition",
+        "definition": "The applied definition for the 'Current smoker' value in each of the 'Status' data elements used in this archetype.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.protocol_Tree.Current_smoker_definition",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.protocol_Tree.Former_smoker_definition",
+        "path": "Tobacco_smoking_summary.protocol_Tree.Former_smoker_definition",
+        "short": "Former smoker definition",
+        "definition": "The applied definition for the 'Former smoker' value in each of the 'Status' data elements used in this archetype.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.protocol_Tree.Former_smoker_definition",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.protocol_Tree.Never_smoked_definition",
+        "path": "Tobacco_smoking_summary.protocol_Tree.Never_smoked_definition",
+        "short": "Never smoked definition",
+        "definition": "The applied definition for the 'Never smoked' value in each of the 'Status' data elements used in this archetype.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.protocol_Tree.Never_smoked_definition",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.protocol_Tree.Pack_definition_DV_COUNT",
+        "path": "Tobacco_smoking_summary.protocol_Tree.Pack_definition_DV_COUNT",
+        "short": "Pack definition",
+        "definition": "The definition of the size of pack used as part of the algorithm for calculating 'Pack years' data elements used in this archetype.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.protocol_Tree.Pack_definition_DV_COUNT",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.protocol_Tree.items_Pack_definition_DvQuantity",
+        "path": "Tobacco_smoking_summary.protocol_Tree.items_Pack_definition_DvQuantity",
+        "short": "Pack definition",
+        "definition": "The definition of the size of pack used as part of the algorithm for calculating 'Pack years' data elements used in this archetype.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.protocol_Tree.items_Pack_definition_DvQuantity",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "Tobacco_smoking_summary.protocol_Tree.Last_updated",
+        "path": "Tobacco_smoking_summary.protocol_Tree.Last_updated",
+        "short": "Last updated",
+        "definition": "The date this tobacco smoking summary was last updated.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Tobacco_smoking_summary.protocol_Tree.Last_updated",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": true
+      }
+    ]
+  }
+}

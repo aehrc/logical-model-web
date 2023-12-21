@@ -1,0 +1,68 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "HaemoglobinA1c",
+  "extension": [
+    {
+      "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
+      "valueReference": {
+        "reference": "Binary/IMG28db36fb-6f97-4922-b9c6-ad73cb5a2e8a"
+      }
+    }
+  ],
+  "url": "https://aehrc.csiro.au/fhir/logical-models/HaemoglobinA1c",
+  "name": "HaemoglobinA1c",
+  "title": "Haemoglobin A1c",
+  "status": "draft",
+  "publisher": "CSIRO",
+  "description": "The Haemoglobin A1c Logical Model Mindmap is shown below.\n\n<div><img src='data:image/png;base64,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'/></div>\n\nBlood test used to measure a form of haemoglobin used to monitor average plasma glucose concentrations over prolonged periods of time.\n\n**Purpose**\n\nTo record a HbA1c measurement at a point in time.\n\n**Considerations**\n\nIt is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "type": "https://aehrc.csiro.au/fhir/logical-models/HaemoglobinA1c",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "extension": [
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
+            "valueString": "To record a HbA1c measurement at a point in time."
+          },
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
+            "valueString": "It is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test."
+          }
+        ],
+        "path": "HaemoglobinA1c",
+        "short": "Haemoglobin A1c",
+        "definition": "Blood test used to measure a form of haemoglobin used to monitor average plasma glucose concentrations over prolonged periods of time.",
+        "comment": "**Purpose**\n\nTo record a HbA1c measurement at a point in time.\n\n**Considerations**\n\nIt is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test.",
+        "alias": [
+          "Haemoglobin A1c",
+          "Glycated Hb",
+          "GHB",
+          "Glycosylated haemoglobin",
+          "Glycohaemoglobin"
+        ],
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "path": "HaemoglobinA1c.HbA1c",
+        "short": "HbA1c",
+        "definition": "The measured HbA1c concentration in the blood.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "HaemoglobinA1c.HbA1c.code",
+        "fixedCode": "mmol/mol"
+      }
+    ]
+  }
+}

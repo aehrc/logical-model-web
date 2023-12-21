@@ -1,0 +1,61 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "UrineAlbuminCreatinineRatio",
+  "extension": [
+    {
+      "url": "https://aehrc.csiro.au/fhir/StructureDefinition/associated-image",
+      "valueReference": {
+        "reference": "Binary/IMG30651f5e-877d-4be6-b245-7157e63cbf85"
+      }
+    }
+  ],
+  "url": "https://aehrc.csiro.au/fhir/logical-models/UrineAlbuminCreatinineRatio",
+  "name": "UrineAlbuminCreatinineRatio",
+  "title": "Urine Albumin Creatinine Ratio",
+  "status": "draft",
+  "publisher": "CSIRO",
+  "description": "The Urine Albumin Creatinine Ratio Logical Model Mindmap is shown below.\n\n<div><img src='data:image/png;base64,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8UsuAqgJIeBZDDTL5OAZVsyBABmBBsUAQqBBYB1WixBwCNumqRVf2TGiCoWP/os/XhCAQEMJFMrj6sw3H99bLBbP6+7u/uj/yHb0aoaxniY/R27KRTMIAc/cfPG9r7xSLrac55lZmAOBpiTQPtyvFu39/u6xsbGLenp69rnsZDOM9TT5ufRVs7eFEPDMw5fc/fx14yfN6vbMLMyBQFMSWND/L8dOHnzzB0qp1aVSacBlJ5thrKfJz6Wvmr0thIBnHl6zZk1H3+JLnxluX7DSM9MwBwJNReCUgz9R8wZ29JXL5dsKhcK3SqXSkMsOZn2sp83Ppa+avS2EgH8eLqxdu3b+wJxPfW2oY9HKkba5beVCi39WYhEEMkhAzrSnH92vZh3aKZmA9wqFwt8UCoW/7O7u3q+UKjvuUubGumf8HLureZtDCHjo266urmJ/f/+88fHx3y0UCpcqpX5JKdWulMJfHvoLkzJFQBb7YaXUf5fL5e+1tLR8f+HChQNdXV3H0+hFBse6V/zS8FkztsnC4q9XC2vWrJHFv2NsbKy1tbUVX/nrKyzLEIHR0dHytGnTRpVSQ6VSSUSB60xAmFamxrqH/DIUfX6ayuLip1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJACHgp1+wCgIQgAAEIOCEAELACWYagQAEIAABCPhJ4H8BDtNqaWbK3VsAAAAASUVORK5CYII='/></div>\n\nCalculated ratio between albumin and creatinine levels in urine, used to screen for microalbuminuria as an early indicator of kidney disease or to monitor progress of known kidney disease.\n\n**Purpose**\n\nTo record an uACR ratio at a point in time.\n\n**Considerations**\n\nIt is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test.",
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "type": "https://aehrc.csiro.au/fhir/logical-models/UrineAlbuminCreatinineRatio",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "extension": [
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
+            "valueString": "To record an uACR ratio at a point in time."
+          },
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
+            "valueString": "It is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test."
+          }
+        ],
+        "path": "UrineAlbuminCreatinineRatio",
+        "short": "Urine Albumin Creatinine Ratio",
+        "definition": "Calculated ratio between albumin and creatinine levels in urine, used to screen for microalbuminuria as an early indicator of kidney disease or to monitor progress of known kidney disease.",
+        "comment": "**Purpose**\n\nTo record an uACR ratio at a point in time.\n\n**Considerations**\n\nIt is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "path": "UrineAlbuminCreatinineRatio.uACR",
+        "short": "uACR",
+        "definition": "The calculated uACR ratio.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "UrineAlbuminCreatinineRatio.uACR.code",
+        "fixedCode": "mg/g"
+      }
+    ]
+  }
+}
