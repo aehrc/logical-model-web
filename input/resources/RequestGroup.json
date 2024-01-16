@@ -312,7 +312,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "https://aehrc.csiro.au/fhir/logical-models/AdverseReactionRisk"
+              "https://aehrc.csiro.au/fhir/logical-models/AdverseReactionRiskSummary"
             ]
           }
         ]
