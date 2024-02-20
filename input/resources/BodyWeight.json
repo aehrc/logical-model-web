@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BodyWeight",
+  "url": "https://aehrc.csiro.au/fhir/logical-models/BodyWeight",
+  "name": "BodyWeight",
+  "title": "Body Weight",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "CSIRO",
+  "description": "The Body Weight Logical Model Mindmap is shown below.\n\n<div><img src='data:image/png;base64,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'/></div>\n\nMeasurement of the weight of the body.\n\n**Purpose**\n\nTo record a measurement of body weight at a point in time.\n\n**Supported Models**\n\nBody weight, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. \nAvailable from: [https://ckm.openehr.org/ckm/archetypes/1013.1.2960](https://ckm.openehr.org/ckm/archetypes/1013.1.2960).\n\n**Considerations**\n\nIt is anticipated that this data group may be expanded over time to incorporate additional detail about the context of measurement, such as the state of dress of the individual or identification of specific measurements such as birth weight.",
+  "keyword": [
+    {
+      "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
+      "code": "core"
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "type": "https://aehrc.csiro.au/fhir/logical-models/BodyWeight",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "extension": [
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
+            "valueString": "To record a measurement of body weight at a point in time."
+          },
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
+            "valueString": "It is anticipated that this data group may be expanded over time to incorporate additional detail about the context of measurement, such as the state of dress of the individual or identification of specific measurements such as birth weight."
+          },
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-mapping",
+            "valueString": "Body weight, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. \nAvailable from: [https://ckm.openehr.org/ckm/archetypes/1013.1.2960](https://ckm.openehr.org/ckm/archetypes/1013.1.2960)."
+          }
+        ],
+        "path": "BodyWeight",
+        "short": "Body Weight",
+        "definition": "Measurement of the weight of the body.",
+        "comment": "**Purpose**\n\nTo record a measurement of body weight at a point in time.\n\n**Supporting Model(s)**\n\nBody weight, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. \nAvailable from: [https://ckm.openehr.org/ckm/archetypes/1013.1.2960](https://ckm.openehr.org/ckm/archetypes/1013.1.2960).\n\n**Considerations**\n\nIt is anticipated that this data group may be expanded over time to incorporate additional detail about the context of measurement, such as the state of dress of the individual or identification of specific measurements such as birth weight.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "path": "BodyWeight.Weight",
+        "short": "Weight",
+        "definition": "The measured weight of the individual.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "BodyWeight.Weight.code",
+        "fixedCode": "kg"
+      }
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "LipidProfile",
+  "url": "https://aehrc.csiro.au/fhir/logical-models/LipidProfile",
+  "name": "LipidProfile",
+  "title": "Lipid Profile",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "CSIRO",
+  "description": "The Lipid Profile Logical Model Mindmap is shown below.\n\n<div><img src='data:image/png;base64,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'/></div>\n\nPanel of blood tests used to measure blood lipid concentrations.\n\n**Purpose**\n\nTo record a group of blood lipid concentrations at a point in time\n\n**Considerations**\n\nIt is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test.",
+  "keyword": [
+    {
+      "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
+      "code": "core"
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "abstract": false,
+  "type": "https://aehrc.csiro.au/fhir/logical-models/LipidProfile",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "extension": [
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
+            "valueString": "To record a group of blood lipid concentrations at a point in time"
+          },
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
+            "valueString": "It is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test."
+          }
+        ],
+        "path": "LipidProfile",
+        "short": "Lipid Profile",
+        "definition": "Panel of blood tests used to measure blood lipid concentrations.",
+        "comment": "**Purpose**\n\nTo record a group of blood lipid concentrations at a point in time\n\n**Considerations**\n\nIt is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test.",
+        "alias": [
+          "Lipid Panel"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "path": "LipidProfile.HDL",
+        "short": "HDL",
+        "definition": "The measured HDL concentration in the blood.",
+        "alias": [
+          "HDL",
+          "HDLC",
+          "HDL-C",
+          "High density lipoprotein cholesterol"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "LipidProfile.HDL.code",
+        "fixedCode": "mmol/L"
+      },
+      {
+        "path": "LipidProfile.LDL",
+        "short": "LDL",
+        "definition": "The calculated LDL concentration in the blood.",
+        "alias": [
+          "LDL",
+          "LDLC",
+          "LDL-C",
+          "Low density lipoprotein cholesterol"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "LipidProfile.LDL.code",
+        "fixedCode": "mmol/L"
+      },
+      {
+        "path": "LipidProfile.TotalCholesterol",
+        "short": "Total Cholesterol",
+        "definition": "The measured total cholesterol concentration in the blood.",
+        "alias": [
+          "TC",
+          "Chol"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "LipidProfile.TotalCholesterol.code",
+        "fixedCode": "mmol/L"
+      },
+      {
+        "path": "LipidProfile.Triglycerides",
+        "short": "Triglycerides",
+        "definition": "The measured triglyceride concentration in the blood.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "LipidProfile.Triglycerides.code",
+        "fixedCode": "mmol/L"
+      }
+    ]
+  }
+}

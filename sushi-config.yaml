@@ -1,0 +1,57 @@
+# ╭────────────────────────────────────────────────────────────────────────────────────────────────╮
+# │  ACTION REQUIRED: REVIEW AND EDIT THIS FILE TO ENSURE IT ACCURATELY REFLECTS YOUR PROJECT!     │
+# │                                                                                                │
+# │  This file was generated from your existing project files and will be used for SUSHI           │
+# │  configuration from now on. You may delete your package.json as it is no longer needed.        │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+# ╭──────────────────────────────ImplementationGuide-gatekeeper.json───────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see:                                                                    │
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: au.csiro.fhir.logical-models
+canonical: https://aehrc.csiro.au/fhir/logical-models
+version: 0.0.1
+name: SparkedLogicalModels
+title: Sparked Logical Models
+status: draft
+publisher:
+  - name: CSIRO
+    url: https://aehrc.csiro.au/
+contact:
+  - name: AU logical models
+    telecom:
+      - system: url
+        value: https://aehrc.csiro.au/
+description: AU logical models
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#036 "Australia (AUS)"
+license: CC0-1.0
+fhirVersion: 4.0.1
+dependencies:
+parameters:
+  show-inherited-invariants: false
+copyrightYear: 2021+
+releaseLabel: CI Build
+# releaseLabel: trial-use
+
+pages:
+  index.md:
+    title: Home  
+  logicalModel.md:
+    title: Logical Models 
+  downloads.md:
+    title: Useful Downloads
+
+menu:
+  IG Home: index.html
+  Table of Contents: toc.html
+  Specifications:
+    Logical models: logicalModel.html
+  Support:
+    FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
+    Report an issue: new-tab https://aehrc.com/
+    Downloads: downloads.html
+	
+
+  

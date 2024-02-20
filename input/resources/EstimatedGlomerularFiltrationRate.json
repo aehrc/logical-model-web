@@ -1,0 +1,71 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "EstimatedGlomerularFiltrationRate",
+  "url": "https://aehrc.csiro.au/fhir/logical-models/EstimatedGlomerularFiltrationRate",
+  "name": "EstimatedGlomerularFiltrationRate",
+  "title": "Estimated Glomerular Filtration Rate",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "CSIRO",
+  "description": "The Estimated Glomerular Filtration Rate Logical Model Mindmap is shown below.\n\n<div><img src='data:image/png;base64,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'/></div>\n\nCalculated measure used to assess the glomerular filtration rate, as a key indicator of kidney function.\n\n**Purpose**\n\nTo record an eGFR concentration at a point in time.\n\n**Considerations**\n\nIt is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test.",
+  "keyword": [
+    {
+      "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
+      "code": "core"
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "type": "https://aehrc.csiro.au/fhir/logical-models/EstimatedGlomerularFiltrationRate",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "extension": [
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
+            "valueString": "To record an eGFR concentration at a point in time."
+          },
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
+            "valueString": "It is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test."
+          }
+        ],
+        "path": "EstimatedGlomerularFiltrationRate",
+        "short": "Estimated Glomerular Filtration Rate",
+        "definition": "Calculated measure used to assess the glomerular filtration rate, as a key indicator of kidney function.",
+        "comment": "**Purpose**\n\nTo record an eGFR concentration at a point in time.\n\n**Considerations**\n\nIt is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test.",
+        "alias": [
+          "Estimated glomerular filtration rate",
+          "Estimated GFR"
+        ],
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "extension": [
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
+            "valueString": "Usually calculated using the CKD-EPI formula"
+          }
+        ],
+        "path": "EstimatedGlomerularFiltrationRate.eGFR",
+        "short": "eGFR",
+        "definition": "The calculated eGFR measurement.",
+        "comment": "**Considerations**\n\nUsually calculated using the CKD-EPI formula",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "EstimatedGlomerularFiltrationRate.eGFR.code",
+        "fixedCode": "mL/min/1.73m^2"
+      }
+    ]
+  }
+}

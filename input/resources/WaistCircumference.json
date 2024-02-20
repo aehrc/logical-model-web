@@ -1,0 +1,64 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "WaistCircumference",
+  "url": "https://aehrc.csiro.au/fhir/logical-models/WaistCircumference",
+  "name": "WaistCircumference",
+  "title": "Waist Circumference",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "CSIRO",
+  "description": "The Waist Circumference Logical Model Mindmap is shown below.\n\n<div><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAdoAAACCCAYAAADhTgmBAAAAAXNSR0IArs4c6QAAFP5JREFUeF7tnX+UVNV9wL8zC4uLKMoPhbCQ1Rgh2sQWj5QW0yjxgIdj2p6e9tQKpKegLLJNLYkJBo50haMxBoImQZdN3KYBbEwMJoIb0cTYbIlGkZ6eBiLFEloXwe4uyq9dGHZ32u8b7+zbyczO7M68O3fmfd4/ujNv7v3ez/fu+7zvvW+WiHBAAAIQgAAEIBAYgUhgLdMwBCAAAQhAAAKCaJkEEIAABCAAgQAJINoA4dI0BCAAAQhAANEyByAAAQhAAAIBEkC0AcKlaQhAAAIQgACiZQ5AAAIQgAAEAiSAaAOES9MQgAAEIAABRMscgAAEIAABCARIANEGCJemIQABCEAAAoiWOQABCEAAAhAIkACiDRAuTUMAAhCAAAQQLXMAAhCAAAQgECABRBsgXJqGAAQgAAEIIFrmAAQgAAEIQCBAAog2QLg0DQEIQAACEEC0zAEIQAACEIBAgAQQbYBwaRoCEIAABCCAaJkDEIAABCAAgQAJINoA4dI0BCAAAQhAANEyByAAAQhAAAIBEkC0AcKlaQhAAAIQgACiZQ5AAAIQgAAEAiSAaAOES9MQgAAEIAABRMscgAAEIAABCARIANEGCJemIQABCEAAAoiWOQABCEAAAhAIkACiDRAuTUMAAhCAAAQQLXMAAhCAAAQgECABRBsgXJqGAAQgAAEIIFrmAAQgAAEIQCBAAog2QLg0DQEIQAACEEC0zAEIQAACEIBAgAQQbYBwaRoCEIAABCCAaJkDEIAABCAAgQAJINoA4dI0BCAAAQhAANEyByAAAQhAAAIBEkC0AcKlaQiEncDo0aOburq6bovFYiPKiUVlZeXZqqqqJ44fP76onMbFWIIhgGiD4UqrEAg9AZXsvHnz/uKRRx4ZNX78+LLi0dbWJnfdddep5ubm7yPbskptIINBtIFgtdNoPtUCd+R2chTmXiorK8+0traOKDfJmpyqbKurq8/GYrHzwpxnxp6dAKLNzsjJM/KtFrgjdzKt5RZUPB6PS1dXlyxfvlw2bdoktbW1smHDBqmqqso41v3790tzc7P3mUxHR0eHzJ8/X3bu3OmdsmXLFu/nfA+NtbOz02vm0Ucflbvvvtv7eeTIkWljjkS8SyjX0XzBl/nnmSAlmuBCVAvckZdo8ksnbE+0u3btkhdffFHuvfdeWbt2rcyePVtmzZqVdhR67vXXXy9r1qzxzk93GHEvXLjQayf153zwbN26VWpqapLxqdCNcNPdHCDafGiH57OItnRz7V3E8j24UORLkM8PQMCbo355qUgPHTqUsfrU98eNG5esaFWi69atk2XLlsnYsWO9rtJVvOa1pUuXJs/3V6XaxurVq73PG4lrXAsWLPBe00pbxb548WI5evSoV30///zzujQsixYt8t47c+aM9/7UqVOTNwx6U0BFy+9ANgKINhshd99PilarBL2IXHPNNfLkk096F4JMR+odO6J1N8FlENmgRZtJpH4W6WRtKs+6ujrZuHGjJ2YjWn1Nha+i9leo27Zt887RJWddzp43b57s3r3bq2inTZvmVbIq2aamJm8Jec+ePd5Nws033yyrVq2S+++/37spQLRlMFMDHgKiDRhwgM0nl+VUtCrQ5557TlpaWjLugel5e/fu9WRs9rQQbYAZoulARJuuolWBqji1QjUVsL+iVUm+X30m94n1fLNMnItoda9W5Ttz5kx55ZVXvCqX3x8meS4EEG0ulNw8J3kRM3LVi4mRrllm84du9rImTZqU3P/iQuFmcsskqkHv0eZS0fr3ZLWirK+vl1tvvdWrLqdPn54UbXt7uzz++ONexap7xPpwlUpaX7vvvvs8MQ9GtLpHq0LWG1pdQdL9YX5/ymSmBjwMRBsw4ACbH7RoterV4+DBg8kHUrhQBJghmv6tp47N/qi/Kk1dCva/l26PVrH6n2Q2mOfOnZtc2dHKds6cOd52yj333CMrV6709l1VyJMnT5YVK1Z4wkwVrcpZl5rNHq3+v37W3JxqrJs3b06uGvH7wyTPhQCizYWSm+cMWrTphsGFws3klkNUhXgy3jUO5mZVq2Se2nctO+7Gg2jdzU22yAa9R4tosyHl/UISyPe73oWMpRBtqWS1mtX/9vb28pehCgE1JG0g2tJNdManjqdMmeLtR+lylz59qXff+p3DdF/op6It3QlQCpHn89fLXB4ff1nN5ey4FxuidS8nXkTdG2R+NBJZKvH4jEhEKlPDjPy9eF9ZyPdQ0cYfzrcVPh80gXhcYt3xij3He6q+verAbZsbGxu7RCT/CZBH4N3bPzg/WhFdKpJ+jubRdGg/6uW5J7Ln+JkR3171wh85kefQ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'/></div>\n\nMeasurement of the distance around the waist\n\n**Purpose**\n\nTo record a measurement of waist circumference at a point in time.\n\n**Supported Models**\n\nWaist circumference, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10].\nAvailable from: [https://ckm.openehr.org/ckm/archetypes/1013.1.2814](https://ckm.openehr.org/ckm/archetypes/1013.1.2814).\n\n**Considerations**\n\nIt is anticipated that this data group may be expanded over time to incorporate additional detail about the context of measurement, such as the method of measurement.",
+  "keyword": [
+    {
+      "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
+      "code": "core"
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "logical",
+  "type": "https://aehrc.csiro.au/fhir/logical-models/WaistCircumference",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation": "specialization",
+  "differential": {
+    "element": [
+      {
+        "extension": [
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
+            "valueString": "To record a measurement of waist circumference at a point in time."
+          },
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
+            "valueString": "It is anticipated that this data group may be expanded over time to incorporate additional detail about the context of measurement, such as the method of measurement."
+          },
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-mapping",
+            "valueString": "Waist circumference, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10].\nAvailable from: [https://ckm.openehr.org/ckm/archetypes/1013.1.2814](https://ckm.openehr.org/ckm/archetypes/1013.1.2814)."
+          }
+        ],
+        "path": "WaistCircumference",
+        "short": "Waist Circumference",
+        "definition": "Measurement of the distance around the waist",
+        "comment": "**Purpose**\n\nTo record a measurement of waist circumference at a point in time.\n\n**Supporting Model(s)**\n\nWaist circumference, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10].\nAvailable from: [https://ckm.openehr.org/ckm/archetypes/1013.1.2814](https://ckm.openehr.org/ckm/archetypes/1013.1.2814).\n\n**Considerations**\n\nIt is anticipated that this data group may be expanded over time to incorporate additional detail about the context of measurement, such as the method of measurement.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "path": "WaistCircumference.Circumference",
+        "short": "Circumference",
+        "definition": "The measured circumference of the waist.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "path": "WaistCircumference.Circumference.code",
+        "fixedCode": "cm"
+      }
+    ]
+  }
+}
