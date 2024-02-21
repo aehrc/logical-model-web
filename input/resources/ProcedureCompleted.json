@@ -12,6 +12,10 @@
     {
       "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
       "code": "core"
+    },
+    {
+      "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
+      "code": "action"
     }
   ],
   "fhirVersion": "4.0.1",
@@ -23,6 +27,7 @@
   "differential": {
     "element": [
       {
+        "id": "ProcedureCompleted",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
@@ -60,9 +65,11 @@
           {
             "code": "BackboneElement"
           }
-        ]
+        ],
+        "mustSupport": false
       },
       {
+        "id": "ProcedureCompleted.ProcedureName",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
@@ -89,6 +96,7 @@
         ]
       },
       {
+        "id": "ProcedureCompleted.ClinicalIndication",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
@@ -111,6 +119,7 @@
         ]
       },
       {
+        "id": "ProcedureCompleted.BodySiteLaterality",
         "path": "ProcedureCompleted.BodySiteLaterality",
         "short": "Body Site Laterality",
         "definition": "Anatomical descriptor/concept",
@@ -123,6 +132,7 @@
         ]
       },
       {
+        "id": "ProcedureCompleted.DatePerformed",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
@@ -142,6 +152,7 @@
         ]
       },
       {
+        "id": "ProcedureCompleted.Comment",
         "path": "ProcedureCompleted.Comment",
         "short": "Comment",
         "definition": "Additional narrative about the procedure not captured in other fields.",

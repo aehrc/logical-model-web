@@ -12,6 +12,10 @@
     {
       "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
       "code": "core"
+    },
+    {
+      "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
+      "code": "observation"
     }
   ],
   "fhirVersion": "4.0.1",

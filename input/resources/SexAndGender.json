@@ -16,6 +16,10 @@
     {
       "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
       "code": "erequest"
+    },
+    {
+      "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
+      "code": "evaluation"
     }
   ],
   "fhirVersion": "4.0.1",
@@ -27,6 +31,7 @@
   "differential": {
     "element": [
       {
+        "id": "SexAndGender",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
@@ -47,9 +52,11 @@
           {
             "code": "BackboneElement"
           }
-        ]
+        ],
+        "mustSupport": false
       },
       {
+        "id": "SexAndGender.SexAssignedAtBirth",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
@@ -73,6 +80,7 @@
         ]
       },
       {
+        "id": "SexAndGender.GenderIdentity",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
@@ -96,6 +104,7 @@
         ]
       },
       {
+        "id": "SexAndGender.Pronouns",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-example",

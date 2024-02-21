@@ -16,6 +16,10 @@
     {
       "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
       "code": "erequest"
+    },
+    {
+      "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
+      "code": "evaluation"
     }
   ],
   "fhirVersion": "4.0.1",
@@ -27,6 +31,7 @@
   "differential": {
     "element": [
       {
+        "id": "EncounterClinicalContext",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
@@ -43,9 +48,11 @@
           {
             "code": "BackboneElement"
           }
-        ]
+        ],
+        "mustSupport": false
       },
       {
+        "id": "EncounterClinicalContext.ReasonForEncounter",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
@@ -74,6 +81,7 @@
         ]
       },
       {
+        "id": "EncounterClinicalContext.TypeOfEncounter",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-example",

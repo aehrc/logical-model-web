@@ -12,6 +12,10 @@
     {
       "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
       "code": "core"
+    },
+    {
+      "system": "https://aehrc.csiro.au/fhir/CodeSystem/cdi-category",
+      "code": "evaluation"
     }
   ],
   "fhirVersion": "4.0.1",
@@ -51,7 +55,8 @@
           {
             "code": "BackboneElement"
           }
-        ]
+        ],
+        "mustSupport": false
       },
       {
         "id": "TobaccoSmokingSummary.OverallStatus",
