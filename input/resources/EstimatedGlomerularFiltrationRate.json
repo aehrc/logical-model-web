@@ -16,12 +16,14 @@
   ],
   "fhirVersion": "4.0.1",
   "kind": "logical",
+  "abstract": false,
   "type": "https://aehrc.csiro.au/fhir/logical-models/EstimatedGlomerularFiltrationRate",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
+        "id": "EstimatedGlomerularFiltrationRate",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
@@ -41,9 +43,11 @@
           "Estimated GFR"
         ],
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "mustSupport": false
       },
       {
+        "id": "EstimatedGlomerularFiltrationRate.eGFR",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-considerations",
@@ -63,6 +67,7 @@
         ]
       },
       {
+        "id": "EstimatedGlomerularFiltrationRate.eGFR.code",
         "path": "EstimatedGlomerularFiltrationRate.eGFR.code",
         "fixedCode": "mL/min/1.73m^2"
       }

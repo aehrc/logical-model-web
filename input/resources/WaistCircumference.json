@@ -16,12 +16,14 @@
   ],
   "fhirVersion": "4.0.1",
   "kind": "logical",
+  "abstract": false,
   "type": "https://aehrc.csiro.au/fhir/logical-models/WaistCircumference",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
+        "id": "WaistCircumference",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
@@ -41,9 +43,11 @@
         "definition": "Measurement of the distance around the waist",
         "comment": "**Purpose**\n\nTo record a measurement of waist circumference at a point in time.\n\n**Supporting Model(s)**\n\nWaist circumference, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10].\nAvailable from: [https://ckm.openehr.org/ckm/archetypes/1013.1.2814](https://ckm.openehr.org/ckm/archetypes/1013.1.2814).\n\n**Considerations**\n\nIt is anticipated that this data group may be expanded over time to incorporate additional detail about the context of measurement, such as the method of measurement.",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "mustSupport": false
       },
       {
+        "id": "WaistCircumference.Circumference",
         "path": "WaistCircumference.Circumference",
         "short": "Circumference",
         "definition": "The measured circumference of the waist.",
@@ -56,6 +60,7 @@
         ]
       },
       {
+        "id": "WaistCircumference.Circumference.code",
         "path": "WaistCircumference.Circumference.code",
         "fixedCode": "cm"
       }

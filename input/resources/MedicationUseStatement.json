@@ -57,7 +57,8 @@
           {
             "code": "BackboneElement"
           }
-        ]
+        ],
+        "mustSupport": false
       },
       {
         "id": "Medications.MedicineName",

@@ -16,12 +16,14 @@
   ],
   "fhirVersion": "4.0.1",
   "kind": "logical",
+  "abstract": false,
   "type": "https://aehrc.csiro.au/fhir/logical-models/Respiration",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
+        "id": "Respiration",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
@@ -41,9 +43,11 @@
         "definition": "The rate and characteristics of spontaneous breathing by an individual.",
         "comment": "**Purpose**\n\nTo record an observation about respiration at a point in time.\n\n**Supporting Model(s)**\n\nRespiration, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. \nAvailable from: [https://ckm.openehr.org/ckm/archetypes/1013.1.4218](https://ckm.openehr.org/ckm/archetypes/1013.1.4218).\n\n**Considerations**\n\nIt is anticipated that this data group may be expanded over time to incorporate additional detail about the context of the measurement, such as the level of exertion at the time of measurement.",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "mustSupport": false
       },
       {
+        "id": "Respiration.Rate",
         "path": "Respiration.Rate",
         "short": "Rate",
         "definition": "The measured frequency of spontaneous breathing.",
@@ -56,6 +60,7 @@
         ]
       },
       {
+        "id": "Respiration.Rate.code",
         "path": "Respiration.Rate.code",
         "fixedCode": "/min"
       }

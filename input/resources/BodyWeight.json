@@ -16,12 +16,14 @@
   ],
   "fhirVersion": "4.0.1",
   "kind": "logical",
+  "abstract": false,
   "type": "https://aehrc.csiro.au/fhir/logical-models/BodyWeight",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
+        "id": "BodyWeight",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
@@ -41,12 +43,21 @@
         "definition": "Measurement of the weight of the body.",
         "comment": "**Purpose**\n\nTo record a measurement of body weight at a point in time.\n\n**Supporting Model(s)**\n\nBody weight, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. \nAvailable from: [https://ckm.openehr.org/ckm/archetypes/1013.1.2960](https://ckm.openehr.org/ckm/archetypes/1013.1.2960).\n\n**Considerations**\n\nIt is anticipated that this data group may be expanded over time to incorporate additional detail about the context of measurement, such as the state of dress of the individual or identification of specific measurements such as birth weight.",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "mustSupport": false
       },
       {
+        "id": "BodyWeight.Weight",
+        "extension": [
+          {
+            "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-example",
+            "valueString": "kg or g"
+          }
+        ],
         "path": "BodyWeight.Weight",
         "short": "Weight",
         "definition": "The measured weight of the individual.",
+        "comment": "**Example**\n\nkg or g",
         "min": 0,
         "max": "1",
         "type": [
@@ -56,6 +67,7 @@
         ]
       },
       {
+        "id": "BodyWeight.Weight.code",
         "path": "BodyWeight.Weight.code",
         "fixedCode": "kg"
       }

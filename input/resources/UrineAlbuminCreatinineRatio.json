@@ -16,12 +16,14 @@
   ],
   "fhirVersion": "4.0.1",
   "kind": "logical",
+  "abstract": false,
   "type": "https://aehrc.csiro.au/fhir/logical-models/UrineAlbuminCreatinineRatio",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
+        "id": "UrineAlbuminCreatinineRatio",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
@@ -37,9 +39,11 @@
         "definition": "Calculated ratio between albumin and creatinine levels in urine, used to screen for microalbuminuria as an early indicator of kidney disease or to monitor progress of known kidney disease.",
         "comment": "**Purpose**\n\nTo record an uACR ratio at a point in time.\n\n**Considerations**\n\nIt is anticipated that this data group will be expanded over time to incorporate additional detail about the context of the laboratory test.",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "mustSupport": false
       },
       {
+        "id": "UrineAlbuminCreatinineRatio.uACR",
         "path": "UrineAlbuminCreatinineRatio.uACR",
         "short": "uACR",
         "definition": "The calculated uACR ratio.",
@@ -52,6 +56,7 @@
         ]
       },
       {
+        "id": "UrineAlbuminCreatinineRatio.uACR.code",
         "path": "UrineAlbuminCreatinineRatio.uACR.code",
         "fixedCode": "mg/g"
       }

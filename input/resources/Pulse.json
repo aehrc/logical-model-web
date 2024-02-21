@@ -16,12 +16,14 @@
   ],
   "fhirVersion": "4.0.1",
   "kind": "logical",
+  "abstract": false,
   "type": "https://aehrc.csiro.au/fhir/logical-models/Pulse",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
+        "id": "Pulse",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-mapping",
@@ -41,9 +43,11 @@
         "definition": "The rate and associated findings related to the palpable beat of blood as it is pumped through a peripheral artery by the heart.",
         "comment": "**Purpose**\n\nTo record an observation about a peripheral pulse at a point in time.\n\n**Supporting Model(s)**\n\nPulse/Heart beat, Published archetype [Internet]. openEHR Foundation, openEHR Clinical Knowledge Manager [cited: 2023-12-10]. \nAvailable from: [https://ckm.openehr.org/ckm/archetypes/1013.1.4295](https://ckm.openehr.org/ckm/archetypes/1013.1.4295).\n\n**Considerations**\n\n* It is anticipated that this data group may be expanded over time to incorporate additional detail:\n\t* about the context of the measurement, such as the location of measurement, characteristics of the pulse and level of exertion at the time of measurement; or \n\t* recording of the pulse findings in one or more specified artery for comparison purposes; or \n\t* interpretation of the pulse findings as a rhythm.\n* The measured rate can be recorded using a device.",
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "mustSupport": false
       },
       {
+        "id": "Pulse.Rate",
         "path": "Pulse.Rate",
         "short": "Rate",
         "definition": "The measured rate of the peripheral pulse.",
@@ -56,6 +60,7 @@
         ]
       },
       {
+        "id": "Pulse.Rate.code",
         "path": "Pulse.Rate.code",
         "fixedCode": "/min"
       }

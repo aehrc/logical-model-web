@@ -16,12 +16,14 @@
   ],
   "fhirVersion": "4.0.1",
   "kind": "logical",
+  "abstract": false,
   "type": "https://aehrc.csiro.au/fhir/logical-models/BodyTemperature",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
+        "id": "BodyTemperature",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
@@ -44,9 +46,11 @@
           "Temperature"
         ],
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "mustSupport": false
       },
       {
+        "id": "BodyTemperature.Temperature",
         "path": "BodyTemperature.Temperature",
         "short": "Temperature",
         "definition": "The measured body temperature.",
@@ -59,6 +63,7 @@
         ]
       },
       {
+        "id": "BodyTemperature.Temperature.code",
         "path": "BodyTemperature.Temperature.code",
         "fixedCode": "[Cel]"
       }

@@ -16,12 +16,14 @@
   ],
   "fhirVersion": "4.0.1",
   "kind": "logical",
+  "abstract": false,
   "type": "https://aehrc.csiro.au/fhir/logical-models/HaemoglobinA1c",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Base",
   "derivation": "specialization",
   "differential": {
     "element": [
       {
+        "id": "HaemoglobinA1c",
         "extension": [
           {
             "url": "https://aehrc.csiro.au/fhir/StructureDefinition/note-purpose",
@@ -44,9 +46,11 @@
           "Glycohaemoglobin"
         ],
         "min": 0,
-        "max": "*"
+        "max": "*",
+        "mustSupport": false
       },
       {
+        "id": "HaemoglobinA1c.HbA1c",
         "path": "HaemoglobinA1c.HbA1c",
         "short": "HbA1c",
         "definition": "The measured HbA1c concentration in the blood.",
@@ -59,6 +63,7 @@
         ]
       },
       {
+        "id": "HaemoglobinA1c.HbA1c.code",
         "path": "HaemoglobinA1c.HbA1c.code",
         "fixedCode": "mmol/mol"
       }
