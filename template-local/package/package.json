@@ -3,11 +3,11 @@
   "type" : "fhir.template",
   "license" : "CC0-1.0",
   "description" : "FHIR implementation guides published in scope of Sparked program",
-  "author" : "http://hl7.org/fhir",
-  "canonical" : "http://fhir.org/templates/hl7.au.sparked.template",
-  "base" : "hl7.au.fhir.template",
+  "author" : "http://csiro.au/fhir",
+  "canonical" : "http://fhir.org/templates/sparked.template",
+  "base" : "hl7.au.sparked.template",
   "dependencies" : {
-    "hl7.au.fhir.template" : "current"
+    "hl7.au.sparked.template" : "current"
   },
   "version" : "0.0.1"
 }

@@ -1,9 +1,9 @@
 /* Product families should override the following two colors with family-specific colors */
 #segment-footer > .container {
-  background-color: #ff9000;
+  background-color: #fcba03;
 }
 .navbar-inverse {
-  background-color: #ff9000;
+  background-color: #fcba03;
 }
 .navbar-inverse .navbar-nav > li > a:hover {
   background-color: #808080;
