@@ -83,7 +83,7 @@ AUCDI provides the common data foundation that can be reused in other use cases.
 
 The Australian eRequesting Data for Interoperability (AUeReqDI) is currently in development and will be published at the end of 2024. Future use-case specific data models can be developed using the same approach, potentially reusing some or all of the evolving ecosystem of AUCDI, AUeReqDI, and other data models as they evolve. 
 
-<img src="sparked-foundation.png" width="100%">
+<img src="aucdi-foundation.png" width="100%">
 
 #### AUCDI data groups
 The AUCDI data groups are comprised of two components – clinical information models and terminologies. 
