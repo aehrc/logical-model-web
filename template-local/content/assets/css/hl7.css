@@ -1,9 +1,9 @@
 /* Product families should override the following two colors with family-specific colors */
 #segment-footer > .container {
-  background-color: #ff9000;
+  background-color: #d87600;
 }
 .navbar-inverse {
-  background-color: #ff9000;
+  background-color: #d87600;
 }
 .navbar-inverse .navbar-nav > li > a:hover {
   background-color: #808080;
@@ -66,4 +66,11 @@
   #background-color: yellow;
   color: red;
   font-weight: bold;
+}
+
+:root {
+/* -- project styling */
+  --footer-text-color: #ffffff; /* 24. Footer highlight font color */
+  --footer-hyperlink-text-color: #ffeedd; /* 25. Footer hyperlinks font color */
+  --footer-highlight-text-color: #ffeedd; /* 26. Footer highlight font color */
 }
