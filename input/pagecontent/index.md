@@ -174,7 +174,7 @@ The case study below, describes how the different AUCDI data groups can be reuse
         </td>
     </tr>
     <tr>
-        <td>
+        <td style="width:25%">
 Related documents
 <ul>
 <li>Patient summary</li>
