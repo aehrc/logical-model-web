@@ -19,7 +19,7 @@ Australia’s first FHIR accelerator, ‘Sparked’, was launched in August 2023
 Sparked is a community-driven collaboration comprising government, technology and software industry partners, provider organisations, clinical and industry peak bodies, healthcare practitioners, and domain experts with a common goal – to accelerate the creation and use of national FHIR standards in healthcare information exchange. 
 The program is led by CSIRO’s Australian e-Health Research Centre (AEHRC) as the community coordinator in partnership with the Department of Health and Aged Care (DOHAC), the Australian Digital Health Agency (Agency) and HL7 Australia (HL7 AU). 
 
-<img src="sparked-partnership.png" width="80%">
+<img src="sparked-partnership.png" width="100%">
 
 
 #### Sparked deliverables 
@@ -36,7 +36,7 @@ Sparked will create the following products during the two-year program:
 * Target Operating Model for AU FHIR Standards development, and 
 * Standards development roadmap to highlight priorities and sequence going forward.
 
-<img src="sparked-deliverables.png" width="80%">
+<img src="sparked-deliverables.png" width="100%">
 
 #### Sparked Community approach
 
@@ -83,7 +83,7 @@ AUCDI provides the common data foundation that can be reused in other use cases.
 
 The Australian eRequesting Data for Interoperability (AUeReqDI) is currently in development and will be published at the end of 2024. Future use-case specific data models can be developed using the same approach, potentially reusing some or all of the evolving ecosystem of AUCDI, AUeReqDI, and other data models as they evolve. 
 
-<img src="aucdi-foundation.png" width="80%">
+<img src="aucdi-foundation.png" width="100%">
 
 #### AUCDI data groups
 The AUCDI data groups are comprised of two components – clinical information models and terminologies. 
@@ -152,7 +152,7 @@ In R1, the scoped data models mark the foundational beginnings, “the core of t
 Data elements needing further community consultation or those not widely implemented and lacking significant clinical importance were omitted from the initial release (R1) and deferred to a backlog for consideration in future updates.
 
 
-<img src="aucdi-scope.png" width="80%">
+<img src="aucdi-scope.png" width="100%">
 
 ##### AUCDI Use cases
 
@@ -291,13 +291,13 @@ FHIR is the next-generation HL7 standard for exchanging healthcare data electron
 The basic building blocks of FHIR, Resources, can be tailored to suit specific use cases by “profiling”. Whilst FHIR is an international standard, national and regional projects can provide localisation of resources and profiles. HL7 Australia’s “AU Base” IG provides localised resources extensions in the Australian context. AU Core specifies minimum data element support and system behaviour capability for a system to record, update, search, and retrieve core health and administrative information.
 AU Core FHIR IG has been developed in reference to the AUCDI, representing the AUCDI data groups as FHIR artefacts. The Sparked HL7 AU Core Technical Design Group (AU Core TDG) has been tasked to design the AU Core FHIR IG under the governance framework of the [HL7 AU Australian FHIR Management Framework](https://confluence.hl7.org/display/HA/Australian+FHIR+Management+Framework).
 
-<img src="aucdi-focus.png" width="80%">
+<img src="aucdi-focus.png" width="100%">
 
 #### Design of the AUCDI
 
 The AUCDI has been developed in collaboration with the community and is informed by the key data drivers such as clinical recording and documentation, clinical decision support, data reuse and reporting requirements. 
 
-<img src="aucdi-relationship.png" width="80%">
+<img src="aucdi-relationship.png" width="100%">
 
 In order to support maximum reuse and leveraging previous investment, the data model has been informed by other key local and international initiatives and programs such as previous Australian specifications and international standards. This includes:
 * My Health Record Specifications, 
@@ -310,7 +310,7 @@ In order to support maximum reuse and leveraging previous investment, the data m
 * HL7 FHIR, and
 * openEHR.
 
-<img src="aucdi-aucore.png" width="80%">
+<img src="aucdi-aucore.png" width="100%">
 
 The initial design of the AUCDI commenced in 2018 during the PCDQF project with an analysis of existing data in primary care clinical systems and national standards. The AUCDI has built upon this foundation, referencing a broader range of national and international standards and initiatives described.
 
@@ -377,4 +377,4 @@ More information on the rationale and approach to these design principles can be
 ### The AUCDI R1 library at a glance
 The scope of the AUCDI R1 library of data groups (as clinical information models) is focused on commonly used clinical concepts, comprising of data elements confirmed by clinicians as ‘core’ for their clinical documentation and broadly supported by existing clinical information systems. The library is composed of the data groups and their component elements shown as below.
 
-<img src="aucdi-glance.png" width="80%">
+<img src="aucdi-glance.png" width="100%">
