@@ -1,261 +1,380 @@
+### Introduction
+
+#### Purpose of document
+The purpose of this document is to outline the contents of the Australian Core Data for Interoperability (AUCDI) and to provide insights into its development context. 
+
+
+#### Intended audience of the document 
+The intended audience of this document is stakeholders interested in improving health data interoperability in Australia. This includes consumers, clinical and technical subject matter experts, healthcare organisations, peak bodies, technology and software industry partner organisations, jurisdictions, and government organisations.
+
+
 ### About Sparked
 
-#### Sparked program overview
+#### Sparked overview
 
-As part of funding in the 2023-24 Federal Budget to implement new initiatives to improve digital health information sharing, the Australian Government provided $15.7 million over two years to progress national health information sharing priorities.  This included $9.3 million over two years for the CSIRO to work with all Australian Governments, the Australian Digital Health Agency and the health technology industry to develop and adopt national Fast Healthcare Interoperability Resources (FHIR) standards.   
+As part of 2023-24 Federal Budget funding to implement new initiatives to improve digital health information sharing, the Australian Government provided $15.7 million over two years to progress national health information sharing priorities. This funding included $9.3 million over two years for Australia’s Commonwealth Scientific and Industrial Research Organisation (CSIRO) to work with all Australian Governments, the Australian Digital Health Agency, HL7 Australia and the health technology industry to develop and adopt national data standards, including clinical information models, terminology value sets and Fast Healthcare Interoperability Resources (FHIR) standards.  
 
-In August 2023 an Australian first FHIR accelerator, ‘Sparked’, was launched with the aim of delivering a core set of FHIR standards for use in Australian settings over the next two years, developed by and for the community.  
+Australia’s first FHIR accelerator, ‘Sparked’, was launched in August 2023 to deliver national core clinical data for interoperability to support health information sharing, the AUCDI. Over the next two years, aligned FHIR standards to support the implementation of AUCDI in Australian settings will be developed by the technical community. 
 
-The Sparked program, run by the CSIRO Australian e-Health Research Centre (AEHRC) is a collaborative consortium incorporating the expertise of:  
-* Department of Health and Aged Care (DoHAC)  
-* Australian Digital Health Agency (ADHA)  
-* HL7 Australia (HL7 AU)  
+Sparked is a community-driven collaboration comprising government, technology and software industry partners, provider organisations, clinical and industry peak bodies, healthcare practitioners, and domain experts with a common goal – to accelerate the creation and use of national FHIR standards in healthcare information exchange. 
+The program is led by CSIRO’s Australian e-Health Research Centre (AEHRC) as the community coordinator in partnership with the Department of Health and Aged Care (DOHAC), the Australian Digital Health Agency (Agency) and HL7 Australia (HL7 AU). 
 
-#### Sparked program deliverables 
+<img src="sparked-partnership.png" width="100%">
 
-Through community collaboration and consensus, the CSIRO has begun to develop an Australian (AU) Core Data for Interoperability (AUCDI) and support the development of an associated AU Core FHIR Implementation Guide for delivery by 2025. This document describes the first release of the AUCDI. 
 
-The Core FHIR Implementation Guide is critical to ensuring that national standards incorporate localised data requirements where there are differences to the international FHIR format. For example, the AU Core will need to cater for identifiers from our Healthcare Identifiers Service to identify patients and consumers.  
+#### Sparked deliverables 
 
-The CSIRO will develop an Australian (AU) eRequesting Dataset for Interoperability and support the development of an associated AU eRequesting FHIR Implementation Guide by June 2025 as the first use case, building off the FHIR AU Core.  
+CSIRO is leading the clinical and technical community collaboration and consensus for developing the AUCDI and AU Core FHIR implementation guides, which are expected to be ready by mid-2025. 
 
-By 2025, the Department of Health and Aged Care will develop a National FHIR Adoption Strategy and roadmap that will guide future Government and industry investment in FHIR standards.
+Sparked will create the following products during the two-year program:
+* Australian Core Data for Interoperability (AUCDI), 
+* AU eRequesting Data for Interoperability (AUeReqDI),
+* AU Core FHIR Implementation Guide,
+* AU eRequesting FHIR Implementation Guide,
+* Royal College of Pathologists Australasia (RCPA) value sets,
+* Royal Australian and New Zealand College of Radiologists (RANZCR) value sets, 
+* Target Operating Model for AU FHIR Standards development, and 
+* Standards development roadmap to highlight priorities and sequence going forward.
+
+<img src="sparked-deliverables.png" width="100%">
 
 #### Sparked Community approach
 
-Rather than building a top-down approach to standards, the CSIRO has taken a bottom-up approach, working with the community rather than dictating to them. This will ensure standards are more readily understood and adopted.  
+Using an open and transparent standards development approach, Sparked is developing an active community of clinicians, software industry vendors, private and public healthcare organisations, and government agencies to co-design and validate nationally agreed health data standards.
 
-Community participation is critical for the success of Sparked. We strongly encourage the community to support Sparked, with details on the program and how to participate available on HL7 Australia and the CSIRO websites.
+This community-centric and consensus-driven approach will ensure standards are driven by community needs and are more readily understood, adopted, and implemented. This builds on the successful approach adopted globally through US-based HL7 FHIR Accelerators such as the Argonaut project. More information on these projects is in 11.2.2.
+To participate in our Sparked community – visit our registration page at [sparked.csiro.au](https://sparked.csiro.au/index.php/get-involved-with-sparked). 
+
 
 ### About Australian Core Data for Interoperability (AUCDI)
 
+#### Background
+
+The Australian health IT landscape is characterised by isolated health information systems, often confined within single clinics or organisations. This fragmentation is prevalent across primary, acute, and tertiary care sectors. The consistency in health data structure is generally limited to systems provided by the same technology industry partner, leading to a lack of alignment between different clinical systems.
+
+This situation poses significant challenges in sharing and exchanging information across systems, impacting the development of value-added services like clinical decision support. The local and often proprietary development of these systems has necessitated the mapping or transformation of health data between systems, increasing the risk of errors and potential loss of critical clinical data.
+
+The fragmented nature of these systems complicates the capture and reuse of health data. Data captured in one system often cannot be efficiently or accurately reused in another, leading to redundant data entry and potential inconsistencies in electronic health records. This not only increases the workload for healthcare providers but also poses risks to clinical safety and quality of care. Inaccurate or incomplete data can lead to misinformed clinical decisions and compromised health outcomes.
+
+Additionally, the focus on developing data sets for secondary rather than primary clinical use adds to the data collection burden for care providers. This approach often overlooks the immediate clinical needs and usability, potentially compromising the effectiveness of clinical decision support systems and the overall quality of health care delivered.
+
 #### Role and purpose of AUCDI
 
-At the current time in Australia, most health data systems (e.g. EMRs) that exist are isolated from each other, within a single clinic or organisation, a health IT landscape characterised by multitude of fragmented silos. This occurs even witin the same sector, whether it be primary, acute or tertiary care. The structure of the health data contained within each system may be consistent only between clinics or organisations that use the same clinical system provided by the same vendor because of a shared proprietary and closed local data structure, however for large, multi-modular EMRs (e.g. hospital EMRs) the large implementation customisations can cause divergence in data collection. Between clinical systems there is currently little, if any, alignment. Unfortunately, any commonality in data structure is effectively due to luck rather than strategic or purposeful design. 
+The AUCDI is changing the approach to health data and is set to become a national asset focused on establishing an independent base of reusable, standardised information models and related artefacts.  As clinical systems converge their internal data structures towards AUCDI, this common, consensus-based data foundation will reduce the need for data transformations and mappings, supporting safer and simpler interoperability. 
 
-This creates significant issues when clinicians need to share or exchange information between different clinical systems, when vendors try to develop value added services such as clinical decision support which uses data collected in different systems and when jurisdictions or other services want to collect and analyse data from multiple systems for population health information. 
+The AUCDI is intentionally agnostic of:
+* Any single clinical use case while being constructed as a foundation for many clinical use cases,
+* Any single clinical system vendor while being strongly informed by functionality and data available in current clinical systems, and 
+* Any single technical implementation or exchange approach while providing the clinical data requirements for developing the FHIR AU Core specifications and subsequent Implementation Guides (IG).
 
-Exchange of health information has been difficult to date because each data set or clinical system has been developed locally, with fragmented, opaque and, often, proprietary ‘secret’ data structures. As a consequence, health data has needed to be mapped or transformed between clinical systems which results in the introduction of possible errors or potential loss of clinical data. Other data sets, such as national minimum data sets, are developed for secondary use rather than primary clinical use can place further data collection burdens on care providers. 
+The AUCDI:
+* Will provide the initial foundation for an evolving ecosystem of agreed data groups, purpose-built to reflect clinical requirements for the data required to support the provision of care, exchange, aggregation for analysis, and to support clinical decision support. 
+* Describes and defines a set of data groups comprising one or more data elements, forming the foundation of a common language to allow systems to exchange semantically accurate data more efficiently.
 
-The Australian Core Data for Interoperability (AUCDI) is intended to provide the initial foundation layer for an evolving ecosystem of agreed data models that has been purpose built to reflect clinical requirements for the data required to support provision of care, exchange, and aggregation for analysis, and to support clinical decision support.  The AUCDI is exchange specification agnostic and vendor neutral, however it is based on an understanding of the functionality that exists in current multiple vendor systems.  
+* Will act as an agent for change by bridging fragmented silos of data and providing a foundation of building blocks of standardised data applicable to multiple use cases across a variety of clinical specialties, geographical locations, and professional contexts and problems.
+* Incorporates and builds upon existing standards and ongoing work from national and international programs and initiatives. It has not been developed in isolation.
+* Is a living artefact that will evolve and grow in future iterations to support additional use cases – adding breadth by including new clinical data groups and depth by expanding with further granular detail.
 
-The AUCDI describes and defines a common ‘lingua franca’ that identifies and leverages existing commonality between systems or suggests modifications or enhancements to systems, that will directly support low friction system-to-system exchange without the requirement for transformation or mapping which can result in errors or loss of data. 
+AUCDI Release 1 (R1) is focused on an agreement of “the core of the core” common data elements, meaning the absolute minimum data required to support standardised clinical information capture at the point of care as well as enable the safe and meaningful exchange of information to other care providers.  
 
-Release 1 of the AUCDI is focussed on agreement of “the core of the core” common data elements to enable quality use of information within the record at the point of care by a care provider as well as enable the safe and meaningful exchange of information to other care providers.   
+##### AUCDI as a foundation
 
-While AUCDI itself is agnostic of any exchange standard, the AUCDI informs the clinical data requirements for the development of the FHIR Implementation Guide for AU Core. This specification sets the minimum expectations on FHIR resources to support conformance and implementation in systems and sets minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information associated with a patient. Further information on the relationship between AUCDI and AU Core can be found in [AUCDI, FHIR and AU Core Implementation Guide]. 
+AUCDI provides the common data foundation that can be reused in other use cases. For example, the eRequesting data model leverages data groups from AUCDI, such as Sex and gender, Problem/Diagnosis summary and Adverse reaction risk summary, as well as adding new data groups that are specific to eRequesting model. AUCDI and eRequesting data groups will be packaged together to represent the complete eRequesting data model. 
 
-The AUCDI will potentially act as an agent for change by bridging between fragmented silos of data and providing a foundation of building blocks of standardised data that can be reused in multiple use cases and a variety of clinical specialties, geographical locations and professional contexts. 
+The Australian eRequesting Data for Interoperability (AUeReqDI) is currently in development and will be published at the end of 2024. Future use-case specific data models can be developed using the same approach, potentially reusing some or all of the evolving ecosystem of AUCDI, AUeReqDI, and other data models as they evolve. 
 
-The AUCDI is a living, growing artefact and will be expanded in future iterations to support additional use cases – adding breadth through inclusion of new clinical data items, and depth by enhancement with further granular detail. 
+<img src="sparked-foundation.png" width="100%">
 
-#### What is the AUCDI
-The primary intent of the Australian Core Data for Interoperability is to design and govern a collection of coherent, reusable building blocks known as ‘clinical information models’. 
+#### AUCDI data groups
+The AUCDI data groups are comprised of two components – clinical information models and terminologies. 
 
 ##### Clinical information models
 
-An information model is a technical term, commonly used in software engineering to describe the representation of data semantics.  
+An information model is a technical term commonly used in software engineering to describe the representation of data semantics. It is like a blueprint or map of how information and its meaning and relationships are managed and organised within a system.
+Each clinical information model describes a single, discrete clinical concept and its clinically agreed data structure, pattern, and content. Some information models will be simple; others will represent a more complex grouping of related data. However, each information model includes:
+* Metadata descriptions about the clinical concept and its intended purpose, purpose, and use,
+* One or more component data elements, each associated with attributes such as data types, recommended values and constraints, and 
+* Relationships between data elements. 
+Within this document, groups of clinical information models are referred to as ‘data groups’. Examples include:
+* ‘Adverse reaction risk summary’,
+* ‘Procedure completed’, and
+* ’Blood Pressure’.
+Each clinical information model is designed to be reused across many data sets, projects, clinical scenarios, and geographical locations. Each one will vary in detail, growing in granularity over time as requirements for applications in different contexts are further understood. 
 
-In this data, each clinical information model describes the clinically agreed data structure, pattern and content for a single, discrete clinical concept. This includes: 
+This core data for interoperability will grow towards providing a master set of information models inclusive of all relevant data elements and their attributes. Existing projects and priorities informed the development of these models and intended to be agnostic to any use case, project, application, or intent. As projects and clinical systems increasingly use the same clinical information models, data interoperability becomes significantly more straightforward because of these shared information models, minimising the need for data transformation and mapping, which can lead to errors or data loss.
 
-* the metadata descriptions about the clinical concept and its intended purpose, purpose and use;  
-
-* one or more component data elements, each associated with attributes such as data types, allowed values and constraints; and  
-
-* relationships between data elements.  
-
-Examples of clinical information models include, but are not limited to: 
-
-* Adverse reaction risk; 
-
-* Procedure completed; and 
-
-* Problem/Diagnosis summary. 
-
-Some information models will be simple; others will represent a more complex grouping of related data. There will also be a variety of types of models, designed to support accurate representations of complex clinical data. For example:  
-
-* multiple data elements that describe various attributes about a specific clinical concept such as a single ‘Procedure’ item; or 
-
-* groupings of repeatable data elements 
-
-Each clinical information model is deliberately designed and created with the intent of re-use across many data sets, projects, clinical scenarios and geographical locations. Each one will vary in the level of detail, which will likely grow in granularity over time as requirements for re-use in different contexts is further understood.  
-
-This core data for interoperability is intended to provide a master set of information models that are inclusive of all relevant data elements and their attributes and, while informed by existing project data and priorities, is intended to be agnostic to any single project, application or intent. Data that might support a specific clinical scenario can be represented by a subset of this data, knowing that there would be consistency with data built to support another clinical scenario if they are both created using the same clinical information models. As projects and clinical systems increasingly use the same clinical information models, interoperability of data becomes orders of magnitude easier because of shared information models, minimising the need for data transformation and mapping.  
-
-This data for interoperability is intended as a living document and will be expanded in future projects to support additional use cases – adding breadth through addition of new clinical information models, and depth through enhancement with granular detail. 
 
 ##### Terminologies, SNOMED CT-AU and value sets
-Within the information model, any data that is intended to be recorded as text can either be recorded as a free text narrative or it can be structured by selecting a word or phrase from a value set. Selection from a known and shared value set from a clinical terminology strongly supports consistency of data recording, including correct spelling and limiting data entry selection to clinically appropriate values. Re-use of agreed and validated terminology value sets within the clinical information models further enhance data exchange, clinical decision support, querying and analysis on health data. 
+Within the information model, capturing data as text can be done through free text narrative or structured, coded text by selecting a word or phrase from a controlled terminology value set. A standardised set of terms is called a value set. Selection from an agreed value set from a standardised clinical terminology can dramatically improve the quality and consistency of data recording. Benefits include correct spelling, acceptable synonyms and limiting data entry selection to clinically appropriate values based on the context. Reusing agreed and validated terminology value sets within the clinical information models further enhances data exchange, clinical decision support, querying, and analysis of health data.
 
-In Australia, SNOMED CT-AU has been adopted as a standard for recording structured value sets in health records. In the Sparked program, SNOMED CT-AU is the primary terminology from which value sets will be derived to support standardised coded text entry in the AUCDI’s clinical information models. Other national terminologies such as LOINC are also included where appropriate. 
+In Australia, SNOMED CT-AU is an adopted standard for recording structured clinical data in health records. In the Sparked program, SNOMED CT-AU is the primary terminology from which value sets are derived to support standardised coded data entry in the AUCDI’s clinical information models. Other code systems, such as LOINC, may also be used where agreed through consultation with the community of practice. Standardised terminologies have been selected because they are internationally recognised with an existing global implementation footprint.
 
-Many SNOMED CT-AU value sets have already been developed through work in the Australian Digital Health Agency (the Agency) and it is intended to re-use these nationally agreed and published value sets where clinically agreed as appropriate. 
+Many SNOMED CT-AU value sets have already been developed and published by the National Clinical Terminology Service (NCTS). These nationally agreed and published value sets are maximal in nature to support reuse across multiple use cases and support the breadth of the ecosystem to enable interoperability.  Where the clinical context or use case requires it, specific IG specification or vendor implementations may specify constrained subsets of the AUCDI value sets.
 
-The breadth of scope for the AUCDI means that there are many value sets that have not been previously developed and so new SNOMED CT-AU value sets are being developed to match the requirements of the information models.   
 
 #### Understanding the scope of AUCDI R1
-The AUCDI focuses on core data required for patient care including clinical data entry, data use and sharing information to support healthcare delivery. The AUCDI is not static and is intended to grow over time as standards mature and users’ needs evolve. 
+The AUCDI focuses on core health data necessary to support high quality healthcare delivery. The first release of AUCDI, is the foundation on which more comprehensive information models will be built as standards, policies, technical implementations, and user requirements mature and evolve.
 
- 
+Key considerations in determining the scope of R1 were to: 
+* Include data that is well understood, commonly used, and well supported by existing clinical systems,
+* Identify incremental change that will create benefits and support broad reuse across multiple use cases,
+* Create a starting block to build upon, avoiding breaking changes in the future as much as possible, and
+* Support clinical safety and best practices.
 
- 
-
-It is  important to find the balance between supporting current clinical practice  and  technical system implementation  to build a foundation to safely support core common data and defining the perfect data , extensive data model.  industry and policy.  
-
-The first release of AUCDI (R1) has been built as the beginning foundation on which further data groups and elements could be iteratively added as users’ requirements are clarified and defined, and policies and technical implementations mature and develop.  
-
- 
-
- 
-
-Key  considerations in developing R1  were  
-
-* To include data that is well understood by users and are well supported by existing implementations across multiple use cases.  
-
-* Identifying incremental change that will create benefit and not not add any clinical risk 
-
-* Data elements that required further consultation or were not yet well implemented were excluded from R1 and have been placed in the backlog for future releases.  
-
-* To create a starting block to build upon, avoiding breaking changes in the future as much as possible.  
-
-* While building the AUCDI, it is important to avoid needing to undo or rework content that has already been defined can be costly for implementations and users.  
 
 ##### Scope drivers
-In order to help us focus our efforts and aid to define the scope of R1, scope drivers were identified. Due to the extensive international engagement and acceptance It was agreed that the clinical content for a health summary, guided by the clinical concepts from the International Patient Summary) would be used to identify data groups and data elements to be included in R1. This clinical content would then be able to underpin any type of health summary such as transfer of care summaries but also chronic disease management, decision support tools like cardiovascular risk calculators and referrals. 
+In designing national data standards, finding the balance between supporting current clinical practice and system implementations that are safe and scalable is crucial. There is also a tension to ensure that the design of the AUCDI can be extended to support future best practices and clinical workflow and leverage the potential for smart use of health data (e.g. CDS and AI), simultaneously avoiding the risk of backwardly incompatible changes and the cost of clinical system rework in subsequent AUCDI releases. This balance helps form a foundation to build on and evolve to become more extensive over time.  
+
+Due to the extensive international engagement and acceptance of the International Patient Summary (11.2.5) and the need for health summary information across many clinical use cases, it was agreed  that the clinical content for a generic health summary would be used to identify many of the data groups and data elements to be included in AUCDI R1. Guided by the clinical concepts from the International Patient Summary, this content underpins any health summary or referral, supports chronic disease health assessment and management, and is a common approach to standardised clinical decision support tools such as a cardiovascular risk calculator or other health assessments (e.g., Aboriginal and Torres Strait Island Health Assessment).
+
 
 ##### Scope AUCDI R1
 
- The scope of AUCDI R1 is a subset of the International Patient Summary and some encounter information. It is intended that the scope will expand in further iterations of the AUCDI. 
+ The R1 scope of AUCDI includes: 
+* Adverse reaction risk summary (allergies and intolerances),
+* Problem/Diagnosis summary,
+* Procedure completed,
+* Vaccination administration (immunisations),
+* Vital signs, measurements and other biomarkers for chronic disease and preventative health with an initial scope of cardiovascular risk calculation and diabetes care, 
+* Medication use statement,
+* Sex and gender, and
+* Encounter information necessary to provide clinical context.
 
-The scope of AUCDI includes:  
-* Problem/Diagnosis,
-* Adverse reaction risk (allergies and intolerances),
-* Medications,
-* Procedures,
-* Vaccinations (immunizations),
-* Vital signs, measurements and other biomarkers for chronic disease and preventative health with an initial scope of cardiovascular risk calculation and diabetes care, and
-* Encounter information that are required to give clinical context. 
+The focus of the AUCDI is the representation of the clinical content necessary for each of the data groups. System information, or system-derived information, is deliberately excluded from the scope of AUCDI unless it is also of clinically significant and requires clinical validation. Information related to technical aspects of recording data (such as author and record date/timestamp) will be managed in the technical implementation specifications (e.g., FHIR IG). 
+Each data group is designed as a standalone module. The data groups can be mixed and matched to represent larger clinical data sets for use in different contexts. 
+In each data group, most data elements are optional. Only a limited number of data elements within a specific data group are deemed mandatory, as the AUCDI is intentionally kept neutral for any specific use case. Data elements are only made mandatory where they are ubiquitous and considered necessary in every possible use case, or when the remainder of the data group makes no sense without a mandatory index data element. Optional data elements can be made mandatory for a specific implementation or FHIR IG.
 
-In R1, the data models developed across the scope area included are by no means complete, but the beginnings, “the core of the core”, on which to further build upon and fill out as AUCDI progresses and further use cases and requirements mature. 
+Some data elements, for example, 'Comment' or 'Clinical Indication,' might share names and be present in several data groups to promote coherence across the data groups. 'Comment' serves as a universal data element with a uniform description across all data groups where it is found. Conversely, 'Clinical Indication' is encountered in a select few data groups. It ensures uniformity in naming and purpose across the data groups it appears in, such as 'Procedure Completed' and 'Medication Use Statement.' However, the specific semantics of each instance may be tailored to fit the concept, reusing value sets where clinically appropriate.
+In R1, the scoped data models mark the foundational beginnings, “the core of the core”, on which to further build upon and fill out as the AUCDI progresses, and as further use cases and requirements mature. 
 
-<img src="AUCDI_R1.JPG" width="100%">
+Data elements needing further community consultation or those not widely implemented and lacking significant clinical importance were omitted from the initial release (R1) and deferred to a backlog for consideration in future updates.
+
+
+<img src="aucdi-scope.png" width="100%">
 
 ##### AUCDI Use cases
 
+The community identified several priority use cases to inform the scope of AUCDI R1. These include:
+* Transfer of care summary (e.g., discharge summary),
+* Chronic disease management (e.g., care plan),
+* Decision support (e.g., cardiovascular disease risk), and
+* Referral.
+
+##### Case study
+
+The case study below, describes how the different AUCDI data groups can be reused to support multiple use cases, for a fictional woman named Maria. 
+
+<div style="padding:50px;border-top: 1px solid orange;border-bottom:1px solid orange">Maria is 65-year-old women, living in regional Australia.  She leads a sedentary lifestyle, has a diet high in carbohydrates and sugars, and smokes cigarettes. She rarely consults with any Health professionals, unless her health issue is no longer self-manageable.<div>
+
+<table>
+    <tr>
+        <td colspan=2>1. GP Visit - Maria visits her GP after experiencing worsening symptoms of Type 2 diabetes. During consultation, GP reviews her medical history, measures her BP, and orders some pathology tests for her current glucose levels and HbA1c, to assess her current diabetes control.
+        </td>
+    </tr>
+    <tr>
+        <td>
+Related documents
+* Patient summary
+* Clinical notes
+* Pathology request
+        </td>
+        <td>
+Example data groups and terminology
+* Problem/Diagnosis (E.g. SCT Code 44054006|Diabetes Mellitus Type 2|), Vaccination Administered, Adverse reaction risk, Sex and Gender, Tobacco smoking summary, Biomarkers (E.g. LOINC Code 4548-4: HbA1c,), Vital signs (LOINC Code 55284-4: BP), Measurements, Encounter – clinical context, Reason for test*, Test name*
+        </td>
+    </tr>
+    <tr>
+        <td colspan=2>2. Medication Management - Based on the test results, GP prescribes Metformin to improve her blood glucose control. Maria fills her prescription at a local pharmacy and begins her medication regimen.
+</td>
+    </tr>
+    <tr>
+        <td>Related documents
+	Pathology results
+</td>
+        <td>Example data groups and terminology
+	Problem/Diagnosis, Procedure completed, Adverse reaction risk, Medication statement (E.g. Medicine Name: AMT MP Code 21614011000036102|Metformin|), Sex and Gender​, Clinical indication
+</td>
+    </tr>
+        <tr>
+        <td colspan=2>3. Hospitalisation - Weeks later, Maria’s blood glucose control deteriorates to the point that she requires hospitalisation. She is admitted as an inpatient for stabilisation and also undergoes a procedure for an untreated foot ulcer
+</td>
+    </tr>
+    <tr>
+        <td>Related documents
+	Hospital admission
+	Discharge summary
+</td>
+        <td>Example data groups and terminology
+	Problem/Diagnosis (E.g. SCT Code 237623001|Acute hyperglycaemia|, 371087003|Diabetic foot ulcer|), Procedure Completed (E.g. SCT-AU Code: 312733004|Debridement of foot ulcer|), Vaccination Administered, Adverse reaction risk, Medication statement, Sex and Gender, Tobacco smoking summary
+</td>
+    </tr>
+     <tr>
+        <td colspan=2>4. Discharge plan to GP - Maria is discharged from the hospital. The discharge plan includes instructions for medication management and follow-up appointments.
+</td>
+    </tr>
+    <tr>
+        <td>Related documents:
+	Discharge summary
+</td>
+        <td>Example data groups and terminology:
+	Problem/Diagnosis (E.g. 237623001|Acute hyperglycaemia|, 371087003|Diabetic foot ulcer|), Procedure Completed (E.g. SCT-AU Code: 312733004|Debridement of foot ulcer|), Medication statement, Biomarkers, Vital signs​
+</td>
+    </tr> <tr>
+        <td colspan=2>5. Allied Health Referral - As part of her ongoing care, GP refers Maria to a Podiatrist to treat her foot ulcer and for advice regarding foot care.
+</td>
+    </tr>
+    <tr>
+        <td>Related documents:
+	Referral to Allied Health
+	Clinical notes
+</td>
+        <td>Examples data groups and terminology:
+	Problem/Diagnosis (E.g. SCT-AU Code 371087003|Diabetic foot ulcer|), Procedure Completed (E.g. SCT-AU Code: 312733004|Debridement of foot ulcer|), Sex and Gender, Medication statement, Encounter – clinical context
+</td>
+    </tr> <tr>
+        <td colspan=2>6. Specialist referral – Due to the complexity of her condition, Maria is also referred to an endocrinologist, for opinion and management of her diabetes and its complications.
+</td>
+    </tr>
+    <tr>
+        <td>Related documents:
+	Referral to specialist
+	Clinical notes
+</td>
+        <td>Example data groups and terminology:
+	Problem/Diagnosis (E.g. SCT-AU Code 44054006|Diabetes Mellitus Type 2|, 371087003|Diabetic foot ulcer|), Procedure Completed, Sex and Gender, Medication statement, Encounter – clinical context
+</td>
+    </tr> <tr>
+        <td colspan=2>7. Care plan - GP develops a comprehensive care plan for Maria, outlining her treatment, medications, lifestyle modifications, and scheduled follow-ups with her healthcare team
+</td>
+    </tr>
+    <tr>
+        <td>Related documents:
+	Care plan
+</td>
+        <td>Example data groups and terminology:
+	Problem/ Diagnosis (E.g. SCT-AU Code 44054006|Diabetes Mellitus Type 2|, Procedure Completed, Adverse reaction risk, Sex and Gender, Medication statement
+</td>
+    </tr> <tr>
+        <td colspan=2>8. Transfer of care to new GP – Maria relocates, necessitating a transfer of her care. Her medical records, including her care plan and recent hospitalisation details are transferred to her new GP.
+</td>
+    </tr>
+    <tr>
+        <td>Related documents:
+	Patient summary
+	Care plan
+</td>
+        <td>Example data groups and terminology:
+	Problem/Diagnosis, Procedure completed, Vaccination Administered, Adverse reaction risk, Sex and Gender, Medication statement, Tobacco smoking summary (E.g. SCT-AU code 77176002|Current smoker|, Biomarkers, Vital signs, Measurements, Encounter – clinical context
+</td>
+    </tr> <tr>
+        <td colspan=2>9. Continuity of care and CVD risk - Maria continues her regular check-ups with her new GP, who reviews her medical records, coordinates her care with the podiatrist and endocrinologist, and calculates her CVD risk based on available health records as a preventative measure.
+</td>
+    </tr>
+    <tr>
+        <td>Related documents:
+	Care plan
+	CVD risk score
+</td>
+        <td>Example data groups and terminology:
+	Sex and Gender, Medication statement, Tobacco smoking summary (e.g., SCT-AU code 77176002|Current smoker|), Biomarkers, Vital signs, Measurements
+</td>
+    </tr>
+
+<table>
 
 #### AUCDI, FHIR and AU Core Implementation Guide
-While AUCDI defines the clinical requirements of the clinical information that should be included for data entry, data use and sharing of information supporting patient care, It does not define “how” the data is exchange as it is data exchange standard agnostic.  
+The primary intent of the AUCDI is to design and govern a collection of coherent, reusable building blocks known as ‘data groups’. These data groups specify “what” is necessary for clinical recording and documentation, data reuse, and health information exchange.  However, it does not specify “how” the data is exchanged; this is the role fulfilled by the FHIR standard.
 
-FHIR is the next-generation HL7 standard for exchanging healthcare data electronically. It is based on the lessons learnt from the many years of developing previous HL7 standards for healthcare data exchange. 
+FHIR is the next-generation HL7 standard for exchanging healthcare data electronically. It is based on the lessons learnt from the many years of developing previous HL7 standards for healthcare data exchange.
 
-The basic building blocks of FHIR, Resources, can be tailored to suit specific use cases by “profiling”. Whilst FHIR is an international standard, national and regional projects can provide localisation of resources. HL7 Australia’s “AU Base” Implementation Guide provides localisation of resources for the Australian context and AU Core defines the Data model and RESTful API interactions that set minimum expectations for a system to record, update, search, and retrieve core digital health and administrative information associated with a patient. 
+The basic building blocks of FHIR, Resources, can be tailored to suit specific use cases by “profiling”. Whilst FHIR is an international standard, national and regional projects can provide localisation of resources and profiles. HL7 Australia’s “AU Base” IG provides localised resources extensions in the Australian context. AU Core specifies minimum data element support and system behaviour capability for a system to record, update, search, and retrieve core health and administrative information.
+AU Core FHIR IG has been developed in reference to the AUCDI, representing the AUCDI data groups as FHIR artefacts. The Sparked HL7 AU Core Technical Design Group (AU Core TDG) has been tasked to design the AU Core FHIR IG under the governance framework of the [HL7 AU Australian FHIR Management Framework](https://confluence.hl7.org/display/HA/Australian+FHIR+Management+Framework).
 
-AU Core FHIR IG has been developed in reference to the AUCDI . This integration links the standardised AUCDI datasets to their representations in FHIR.  
 
-<img src="Feedback.JPG" width="100%">
+<img src="aucdi-focus.png" width="100%">
 
-#### Design and use of the AUCDI
+#### Design of the AUCDI
 
-A collaborative community co-design process was established to reach consensus with the clinical profession and software industry on the core common data items required in the AUCDIi. 
+The AUCDI has been developed in collaboration with the community and is informed by the key data drivers such as clinical recording and documentation, clinical decision support, data reuse and reporting requirements. 
 
-The initial design of the AUCDI commenced with an analysis of existing data in primary care clinical systems, national and international standards, existing FHIR resources and openEHR archetypes. 
+<img src="aucdi-relationship.png" width="100%">
 
- 
+In order to support maximum reuse and leveraging previous investment, the data model has been informed by other key local and international initiatives and programs such as previous Australian specifications and international standards. This includes:
+* My Health Record Specifications, 
+* CSIRO Primary Care Data Quality Foundations (PCDQF), 
+* AIHW Minimum Data Sets,
+* International Patient Summary (IPS),
+* The pan-Canadian Health Data Content Framework,
+* United States Core Data for Interoperability (USCDI), 
+* UK Professional Record Standards Body (PRSB),
+* HL7 FHIR, and
+* openEHR.
 
- Previous work done as part of CSIRO’s Primary Care Data Quality Foundation work which developed a Primary Care Data Dictionary which provided the initial foundation layer for an evolving ecosystem of agreed and publicly available health data that has been purpose built to reflect clinical requirements for provision of care, data exchange, and aggregation for analysis, and to support clinical decision support. Release 1 of the Data Dictionary was focussed on agreement of the core common data elements to enable quality use of information within the record at the practice as well as enable the safe and meaningful exchange of information to other care providers and which was enhanced and extended in the second release to support a range of health assessment clinical scenarios. Decisions about the level of detail included had been pragmatic and intended to align or extend existing vendor data models where possible and to support clinical priorities for adding structured data that will impact patient care. The content of SNOMED CT-AU informed the clinical information models as well as providing the value sets. 
+<img src="aucdi-aucore.png" width="100%">
 
- 
+The initial design of the AUCDI commenced in 2018 during the PCDQF project with an analysis of existing data in primary care clinical systems and national standards. The AUCDI has built upon this foundation, referencing a broader range of national and international standards and initiatives described.
 
-The approach to design of the AUCDI has incorporated the following processes 
+The AUCDI is deliberately designed with a focus on clinicians and stakeholders, ensuring that the conceptual data models represent common, well-defined requirements identified from agreed use cases. The AUCDI direction and scope were established through in-person workshops involving clinicians, informaticians, software engineers, and other stakeholders, conducted over a period of months across 2023 and 2024. The structured representation of the AUCDI concepts in R1 has been informed by established clinical information model standards, particularly openEHR archetypes, which have been purposely developed by clinicians and informaticians focused on ensuring high-quality structured clinical data that is clinically safe and fit for purpose.
 
-Open collaborative, consensus driven approach 
+Core Design principles were developed to assist the development of AUCDI and to allow prioritisation by the Sparked team and the community. The following table sets out the design principles used and how the clinical information model has been aligned. 
 
-Clinical data design group 
+<table>
+<tr>
+    <th>Design Principles</th><th>Alignment</th>
+</tr>
+<tr>
+    <td>Reduce duplication - single entry, single development (multiple use and reuse)</td>
+    <td>Data collected in a structured and coded manner enables data to be reused for clinical decision support; the population of summary information, forms, and letters; and for secondary use such as population health planning.</td>
+</tr>
+<tr>
+    <td>Supports person-centred care - driven by a clinical quality and safety use case</td>
+    <td>Using standardised coded structured data for health information will support good clinical care, unambiguous transfer of clinical information and clinical decision support. This allows delivery of the right care to the right person at the right time.</td>
+</tr>
+<tr>
+    <td>No data for data’s sake</td>
+    <td>Every proposed data element has a practical purpose.
+Data models are intentionally minimal to start with, incorporating the minimum data elements to support safe and effective care, rather than collecting a comprehensive data set. In future releases, new data group concepts will be added and the level of detail of existing data groups will be increased to support clinical priorities and data requirements.
+</td>
+</tr>
+<tr>
+    <td>Driven by clinical data use first</td>
+    <td>Clinical data collection should be driven by primary use first – clinical use; however secondary use should still be considered. Data designed for clinical use at the point of care should also enable the data to be reused and aggregated for secondary purposes.</td>
+</tr>
+<tr>
+    <td>Supports best practice care, clinical guidelines, and clinician workflow </td>
+    <td>The use of standardised, coded, structured data for clinical information will support best practice clinical care, clinical decision support including guidelines, and streamlined clinician workflow.</td>
+</tr>
+<tr>
+    <td>Systems can support now or with minimal effort</td>
+    <td>Most systems can support the minimal model represented in R1. In future releases, the R1 data groups may be enhanced or new data groups added to evolve towards a strategic roadmap with an agile iterative process.</td>
+</tr>
+<tr>
+    <td>Alignment with national health data standards and initiatives</td>
+    <td>Reference national standards and initiatives, such as:
+* SNOMED CT-AU and the Australian Medicines Terminology (AMT)
+* My Health Record
+* The Royal Australian College of General Practitioners “Minimum requirements for general practice clinical information systems to improve usability”
+</td>
+</tr>
+<tr>
+    <td>Alignment with international standards and initiatives</td>
+    <td>Reference international standards and initiatives, such as:
+* International Patient Summary
+* HL7 Gender Harmony Project
+* Information models:
+  * FHIR Resources
+  * openEHR archetypes
+</td>
+</tr>
+<tr>
+    <td>Involve and consider all healthcare domains and care modalities </td>
+    <td>The data groups are agnostic of any specific use case and needs to support usage in all healthcare domains and across healthcare modalities. Stakeholders engaged include primary, acute, and tertiary care and specialised domains and professions such as aged care and allied health.</td>
+</tr>
+</table>
 
-Open feedback process 
+More information on the rationale and approach to these design principles can be found in 10.3 and how they align with AUCDI R1.
 
-Core design principles 
+### The AUCDI R1 library at a glance
+The scope of the AUCDI R1 library of data groups (as clinical information models) is focused on commonly used clinical concepts, comprising of data elements confirmed by clinicians as ‘core’ for their clinical documentation and broadly supported by existing clinical information systems. The library is composed of the data groups and their component elements shown as below.
 
-##### Open collaborative, consensus driven approach
-
-###### Clinical data design group
-A Clinical data design group was established  asdfjkasdfjkasf 
-
- 
-
-The purpose of Sparked Clinical Design Group was to: 
-
-Assist in the prioritisation and development of the Data Sets for Interoperability 
-
-Meet monthly to understand clinical requirements for the AUCDI/AUeReqDI and to review draft AUCDI / AUeReqDI and to address the consultation objectives and consider the content of the AUCDI / AUeReqDI, implementation considerations and risks 
-
-Interact with the Sparked AU Core Technical Design Group and Sparked eRequesting Technical Design Groups as required to ensure as much alignment as possible between the groups 
-
- 
-
-Numbers of members, attendees etc., number of workshops, etc. 
-
-###### Open feedback process
-If there was not consensus regarding a concept or data element, or the specification was not mature, it was pushed toward a future release, pending further discussion and agreement. 
-
-The AUCDI is intended to gradually build a collection of re-usable clinical information models and associated SNOMED CT-AU value sets that will provide a foundation for a standardised health data ecosystem.   
-
-##### Core Design principles
-To assist the development of AUCDI and to focus allow prioritisation by the Sparked team, the CDG and its collaborators, 8 design principles were developed at the first CDG workshop in September 2023. The details of the design principles are in the table below. 
-
-| Design Principles | Rationale | Approach |
-| -------- | ----- | --- |
-| Reduce duplication - Single entry, single development (multiple use and reuse) | Well-structured clinical data defined at the point of collection  should be able to be reused for multiple use cases (e.g. clinical decision support, reporting and analytics). This reduces burden of effort on care providers to record similar versions of the same information in multiple different locations. It can also help reduce the need for an individual to share their information multiple times in different settings. | Supporting preventative care/chronic disease management to drive clinical decision support, considering secondary use data sets e.g. AIHW primary care data model, PIP QI |
-| Supports patient centred care - driven by a clinical quality and safety use case | Person-centred care is widely recognised as a foundation to safe, high-quality health care. It is care that respects and responds to the preferences, needs and values of patients and consumers. (https://www.safetyandquality.gov.au/our-work/partnering-consumers/person-centred-care)  | Engaging with clinicians from the beginning across the health ecosystem <br/>Looking at agreed national clinical standards and guidelines |
-| Not data for data's sake | Before collecting data, it should be important to understand what use case it serves so as not to burden the care provider with collecting data that is of little to no value | Starting with “core of the core” and growing iteratively |
-| Driven by primary clinical data use not secondary data use needs | Clinical data collection should be driven by primary use first – clinical use; however secondary use should still be considered. If data collection for primary use is designed correctly, it should be able to be reused and aggregated for most secondary use cases | Considering secondary use data sets e.g. AIHW primary care data model, PIP QI, etc. <br/> Looking towards data that can be reused for secondary uses |
-| Supports best practice care, clinical guidelines and clinician workflow | Provision of care must be in accordance with minimum evidence-based standards, guidelines and protocols. <br/>Standardised health data should support best practice care, clinical guidelines and care provider workflow. | Engaging with clinicians across the health ecosystem from the beginning Looking at agreed national clinical standards and guidelines |
-| Systems can support now or with minimal effort, supporting a strategic roadmap with an agile iterative process | | Aligned with AU Core, looking at US Core <br/>Meetings with vendors and survey to go out to TDG to validate |
-| Leverage agreed national health data standards | To seamlessly exchange or access health information and ensure consistent understanding, it is essential to use nationally agreed digital health standards, specifications and terminology  | Using agreed national clinical and technical standards – FHIR, SNOMED CT, LOINC, clinical standards e.g. RACGP Clinical guidelines |
-| Involve and consider all healthcare domains and care modalities | | Engaging with clinicians, jurisdictions and industry from across the health ecosystem | 
-
-#### International perspective 
-There are a number of similar programs of work occurring around the world. Of interest is the USA, UK and Canada 
- 
-
-**USCDI**
-
-The Office of the National Coordinator for Health Information Technology (ONC) in the US have developed the United States Core Data for Interoperabiity (USCDI).   
- 
-**PRSB**
-
-In the UK, the Professional Records Body (PRSB) has developed the Core Information Standard. The core information standard is a standard for sharing information in health and care record. It is a consensus and evidence-based standard that defines a set of information that can potentially be shared between systems in different sites and settings, among professionals and people using services.  
-
-The PRSB is working closely with the NHS Digital interoperability team to align V2.0 to the UK core R4 FHIR profiles. This is in progress and with work completed on many areas such as person demographics, allergies and adverse reactions, medications and medical devices. 
-
-**IPS**
- 
-
-**Pan Canadian Health Data Framework**
-
-#### AUCDI and implementation
-Expected that it will be used in diff ways for different use cases 
-
-Different modes of use – different terminolgoies - recommended 
-
-### How to read the AUCDI
-
-#### How to read the AUCDI overview?
-
-#### How to read the AUCDI?
-This section of the document describes the data groups and elements that make up the AUCDI 
-
-##### Data group 
-
-##### Data element
-
-### AUCDI at a glance
-AUCDI R1 is composed of the data groups and elements as shown in diagram below.
-
-<img src="AUCDI.JPG" width="100%">
-
-#### Data groups at a glance
-
-#### Adverse reaction risk
-
-This data group is used to record an assessment of the propensity for an individual to experience an adverse reaction if exposed, or re-exposed, to a specified substance or class of substances, and an overview of each related reaction event.
+<img src="aucdi-glance.png" width="100%">
