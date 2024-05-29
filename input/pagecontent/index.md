@@ -166,7 +166,7 @@ The community identified several priority use cases to inform the scope of AUCDI
 
 The case study below, describes how the different AUCDI data groups can be reused to support multiple use cases, for a fictional woman named Maria. 
 
-<div style="margin-left:100px;margin-right:100px;border-top: 1px solid orange;border-bottom:1px solid orange;justify-content:center;align-items: center;">Maria is 65-year-old women, living in regional Australia.  She leads a sedentary lifestyle, has a diet high in carbohydrates and sugars, and smokes cigarettes. She rarely consults with any Health professionals, unless her health issue is no longer self-manageable.</div><br/><br/>
+<div style="margin-left:100px;margin-right:100px;border-top: 1px solid orange;border-bottom:1px solid orange;justify-content:center;align-items: center;">"Maria is 65-year-old women, living in regional Australia.  She leads a sedentary lifestyle, has a diet high in carbohydrates and sugars, and smokes cigarettes. She rarely consults with any Health professionals, unless her health issue is no longer self-manageable."</div><br/><br/>
 
 <table class="table table-info table-striped">
     <tr>
@@ -176,13 +176,17 @@ The case study below, describes how the different AUCDI data groups can be reuse
     <tr>
         <td>
 Related documents
-* Patient summary
-* Clinical notes
-* Pathology request
+<ul>
+<li>Patient summary</li>
+<li>Clinical notes</li>
+<li>Pathology request</li>
+</ul>
         </td>
         <td>
 Example data groups and terminology
-* Problem/Diagnosis (E.g. SCT Code 44054006|Diabetes Mellitus Type 2|), Vaccination Administered, Adverse reaction risk, Sex and Gender, Tobacco smoking summary, Biomarkers (E.g. LOINC Code 4548-4: HbA1c,), Vital signs (LOINC Code 55284-4: BP), Measurements, Encounter – clinical context, Reason for test*, Test name*
+<ul>
+<li>Problem/Diagnosis (E.g. SCT Code 44054006|Diabetes Mellitus Type 2|), Vaccination Administered, Adverse reaction risk, Sex and Gender, Tobacco smoking summary, Biomarkers (E.g. LOINC Code 4548-4: HbA1c,), Vital signs (LOINC Code 55284-4: BP), Measurements, Encounter – clinical context, Reason for test*, Test name*</li>
+</ul>
         </td>
     </tr>
     <tr>
@@ -191,10 +195,16 @@ Example data groups and terminology
     </tr>
     <tr>
         <td>Related documents
-	Pathology results
+<ul>
+<li>Pathology results</li>
+</ul>
+	
 </td>
         <td>Example data groups and terminology
-	Problem/Diagnosis, Procedure completed, Adverse reaction risk, Medication statement (E.g. Medicine Name: AMT MP Code 21614011000036102|Metformin|), Sex and Gender​, Clinical indication
+        <ul>
+          <li>Problem/Diagnosis, Procedure completed, Adverse reaction risk, Medication statement (E.g. Medicine Name: AMT MP Code 21614011000036102|Metformin|), Sex and Gender​, Clinical indication</li>
+        </ul>
+	
 </td>
     </tr>
         <tr>
@@ -203,11 +213,17 @@ Example data groups and terminology
     </tr>
     <tr>
         <td>Related documents
-	Hospital admission
-	Discharge summary
+        <ul>
+          <li>Hospital admission</li>
+          <li>Discharge summary</li>
+        </ul>
+
 </td>
         <td>Example data groups and terminology
-	Problem/Diagnosis (E.g. SCT Code 237623001|Acute hyperglycaemia|, 371087003|Diabetic foot ulcer|), Procedure Completed (E.g. SCT-AU Code: 312733004|Debridement of foot ulcer|), Vaccination Administered, Adverse reaction risk, Medication statement, Sex and Gender, Tobacco smoking summary
+        <ul>
+          <li>Problem/Diagnosis (E.g. SCT Code 237623001|Acute hyperglycaemia|, 371087003|Diabetic foot ulcer|), Procedure Completed (E.g. SCT-AU Code: 312733004|Debridement of foot ulcer|), Vaccination Administered, Adverse reaction risk, Medication statement, Sex and Gender, Tobacco smoking summary</li>
+        </ul>
+	
 </td>
     </tr>
      <tr>
@@ -216,10 +232,16 @@ Example data groups and terminology
     </tr>
     <tr>
         <td>Related documents:
-	Discharge summary
+        <ul>
+          <li>Discharge summary</li>
+        </ul>
+	
 </td>
         <td>Example data groups and terminology:
-	Problem/Diagnosis (E.g. 237623001|Acute hyperglycaemia|, 371087003|Diabetic foot ulcer|), Procedure Completed (E.g. SCT-AU Code: 312733004|Debridement of foot ulcer|), Medication statement, Biomarkers, Vital signs​
+        <ul>
+          <li>Problem/Diagnosis (E.g. 237623001|Acute hyperglycaemia|, 371087003|Diabetic foot ulcer|), Procedure Completed (E.g. SCT-AU Code: 312733004|Debridement of foot ulcer|), Medication statement, Biomarkers, Vital signs​</li>
+        </ul>
+	
 </td>
     </tr> <tr>
         <td colspan=2>5. Allied Health Referral - As part of her ongoing care, GP refers Maria to a Podiatrist to treat her foot ulcer and for advice regarding foot care.
@@ -227,11 +249,18 @@ Example data groups and terminology
     </tr>
     <tr>
         <td>Related documents:
-	Referral to Allied Health
-	Clinical notes
+        <ul>
+          <li>Referral to Allied Health</li>
+          <li>Clinical notes</li>
+        </ul>
+	
+	
 </td>
         <td>Examples data groups and terminology:
-	Problem/Diagnosis (E.g. SCT-AU Code 371087003|Diabetic foot ulcer|), Procedure Completed (E.g. SCT-AU Code: 312733004|Debridement of foot ulcer|), Sex and Gender, Medication statement, Encounter – clinical context
+        <ul>
+          <li>Problem/Diagnosis (E.g. SCT-AU Code 371087003|Diabetic foot ulcer|), Procedure Completed (E.g. SCT-AU Code: 312733004|Debridement of foot ulcer|), Sex and Gender, Medication statement, Encounter – clinical context</li>
+        </ul>
+	
 </td>
     </tr> <tr>
         <td colspan=2>6. Specialist referral – Due to the complexity of her condition, Maria is also referred to an endocrinologist, for opinion and management of her diabetes and its complications.
@@ -239,11 +268,18 @@ Example data groups and terminology
     </tr>
     <tr>
         <td>Related documents:
-	Referral to specialist
-	Clinical notes
+        <ul>
+          <li>Referral to specialist</li>
+          <li>Clinical notes</li>
+        </ul>
+	
+	
 </td>
         <td>Example data groups and terminology:
-	Problem/Diagnosis (E.g. SCT-AU Code 44054006|Diabetes Mellitus Type 2|, 371087003|Diabetic foot ulcer|), Procedure Completed, Sex and Gender, Medication statement, Encounter – clinical context
+        <ul>
+          <li>Problem/Diagnosis (E.g. SCT-AU Code 44054006|Diabetes Mellitus Type 2|, 371087003|Diabetic foot ulcer|), Procedure Completed, Sex and Gender, Medication statement, Encounter – clinical context</li>
+        </ul>
+	
 </td>
     </tr> <tr>
         <td colspan=2>7. Care plan - GP develops a comprehensive care plan for Maria, outlining her treatment, medications, lifestyle modifications, and scheduled follow-ups with her healthcare team
@@ -251,10 +287,16 @@ Example data groups and terminology
     </tr>
     <tr>
         <td>Related documents:
-	Care plan
+        <ul>
+          <li>Care plan</li>
+        </ul>
+	
 </td>
         <td>Example data groups and terminology:
-	Problem/ Diagnosis (E.g. SCT-AU Code 44054006|Diabetes Mellitus Type 2|, Procedure Completed, Adverse reaction risk, Sex and Gender, Medication statement
+        <ul>
+          <li>Problem/ Diagnosis (E.g. SCT-AU Code 44054006|Diabetes Mellitus Type 2|, Procedure Completed, Adverse reaction risk, Sex and Gender, Medication statement</li>
+        </ul>
+	
 </td>
     </tr> <tr>
         <td colspan=2>8. Transfer of care to new GP – Maria relocates, necessitating a transfer of her care. Her medical records, including her care plan and recent hospitalisation details are transferred to her new GP.
@@ -262,11 +304,15 @@ Example data groups and terminology
     </tr>
     <tr>
         <td>Related documents:
-	Patient summary
-	Care plan
+        <ul>
+          <li>Patient summary</li>
+          <li>Care plan</li>
+        </ul>
 </td>
         <td>Example data groups and terminology:
-	Problem/Diagnosis, Procedure completed, Vaccination Administered, Adverse reaction risk, Sex and Gender, Medication statement, Tobacco smoking summary (E.g. SCT-AU code 77176002|Current smoker|, Biomarkers, Vital signs, Measurements, Encounter – clinical context
+        <ul>
+          <li>Problem/Diagnosis, Procedure completed, Vaccination Administered, Adverse reaction risk, Sex and Gender, Medication statement, Tobacco smoking summary (E.g. SCT-AU code 77176002|Current smoker|, Biomarkers, Vital signs, Measurements, Encounter – clinical context</li>
+        </ul>
 </td>
     </tr> <tr>
         <td colspan=2>9. Continuity of care and CVD risk - Maria continues her regular check-ups with her new GP, who reviews her medical records, coordinates her care with the podiatrist and endocrinologist, and calculates her CVD risk based on available health records as a preventative measure.
@@ -274,11 +320,16 @@ Example data groups and terminology
     </tr>
     <tr>
         <td>Related documents:
-	Care plan
-	CVD risk score
+        <ul>
+          <li>Care plan</li>
+          <li>CVD risk score</li>
+        </ul>
 </td>
         <td>Example data groups and terminology:
-	Sex and Gender, Medication statement, Tobacco smoking summary (e.g., SCT-AU code 77176002|Current smoker|), Biomarkers, Vital signs, Measurements
+        <ul>
+          <li>Sex and Gender, Medication statement, Tobacco smoking summary (e.g., SCT-AU code 77176002|Current smoker|), Biomarkers, Vital signs, Measurements</li> 
+        </ul>
+	
 </td>
     </tr>
 </table>
