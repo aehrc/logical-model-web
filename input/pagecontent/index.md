@@ -166,7 +166,7 @@ The community identified several priority use cases to inform the scope of AUCDI
 
 The case study below, describes how the different AUCDI data groups can be reused to support multiple use cases, for a fictional woman named Maria. 
 
-<div style="margin-left:100px;margin-right:100px;border-top: 1px solid orange;border-bottom:1px solid orange;justify-content:center;align-items: center;">"Maria is 65-year-old women, living in regional Australia.  She leads a sedentary lifestyle, has a diet high in carbohydrates and sugars, and smokes cigarettes. She rarely consults with any Health professionals, unless her health issue is no longer self-manageable."</div><br/><br/>
+<div style="margin-left:100px;margin-right:100px;border-top: 1px solid orange;border-bottom:1px solid orange;justify-content:center;align-items: center;">"Maria is 65-year-old women, living in regional Australia.  She leads a sedentary lifestyle, has a diet high in carbohydrates and sugars, and smokes cigarettes. She rarely consults with any Health professionals, unless her health issue is no longer self-manageable."</div><br/>
 
 <table class="table table-info table-striped">
     <tr>
